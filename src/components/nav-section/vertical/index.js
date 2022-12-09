@@ -34,7 +34,7 @@ export default function NavSectionVertical({ navConfig, isCollapse = false, ...o
   const { translate } = useLocales();
 
   return (
-    <Box {...other} sx={{ background: theme.palette.primary.dark, height: '100%' }}>
+    <Box {...other} sx={{ background: theme.palette.primary.dark }}>
       {navConfig.map((group) => (
         <List key={group.subheader} disablePadding>
           <ListSubheaderStyle

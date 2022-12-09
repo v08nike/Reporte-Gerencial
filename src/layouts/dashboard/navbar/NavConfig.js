@@ -3,27 +3,19 @@ import { PATH_DASHBOARD } from '../../../routes/paths';
 // components
 // import Label from '../../../components/Label';
 // import Iconify from '../../../components/Iconify';
-import SvgIconStyle from '../../../components/SvgIconStyle';
 
 // ----------------------------------------------------------------------
 
-const getIcon = (name) => <SvgIconStyle src={`/assets/icons/navbar/${name}.svg`} sx={{ width: 1, height: 1 }} />;
+const getIcon = (name) => <img alt='Navbar Icon!!!' src={`/assets/icons/navbar/${name}.png`} sx={{ width: 1, height: 1 }} />;
 
 const ICONS = {
-  blog: getIcon('ic_blog'),
-  cart: getIcon('ic_cart'),
-  chat: getIcon('ic_chat'),
-  mail: getIcon('ic_mail'),
-  user: getIcon('ic_user'),
-  kanban: getIcon('ic_kanban'),
-  banking: getIcon('ic_banking'),
-  booking: getIcon('ic_booking'),
-  invoice: getIcon('ic_invoice'),
-  calendar: getIcon('ic_calendar'),
-  ecommerce: getIcon('ic_ecommerce'),
-  analytics: getIcon('ic_analytics'),
-  dashboard: getIcon('ic_dashboard'),
-  menuItem: getIcon('ic_menu_item'),
+  icon1: getIcon('icon_1'),
+  icon2: getIcon('icon_2'),
+  icon3: getIcon('icon_3'),
+  icon4: getIcon('icon_4'),
+  icon5: getIcon('icon_5'),
+  icon6: getIcon('icon_6'),
+  icon7: getIcon('icon_7'),
 };
 
 const navConfig = [
@@ -35,7 +27,7 @@ const navConfig = [
       {
         title: 'Comercio Exterior ',
         path: PATH_DASHBOARD.general.app,
-        icon: ICONS.dashboard,
+        icon: ICONS.icon1,
         children: [
           { title: 'Exportaciones', path: '#' },
           { title: 'Importanciones', path: '#' },
@@ -44,7 +36,7 @@ const navConfig = [
       {
         title: 'Titulos Habilitantes',
         path: '',
-        icon: ICONS.ecommerce,
+        icon: ICONS.icon2,
         children: [
           { title: 'Concesiones', path: '#' },
           { title: 'Autorizaciones', path: '#' },
@@ -54,16 +46,16 @@ const navConfig = [
       {
         title: 'Control de Productos',
         path: '',
-        icon: ICONS.analytics,
+        icon: ICONS.icon3,
         children: [
           { title: 'Productos transferidos', path: '#' },
           { title: 'Productos Forestales Clasificados para ser Transferidos', path: '#' },
         ],
       },
       {
-        title: 'Produccion, Industria y Comercio',
+        title: 'Produccion, Industria y ...',
         path: '',
-        icon: ICONS.banking,
+        icon: ICONS.icon4,
         children: [
           { title: 'Producción Forestal', path: '#' },
           { title: 'Depósitos y establecimientos', path: '#' },
@@ -74,7 +66,7 @@ const navConfig = [
       {
         title: 'Fauna silvestre ',
         path: '',
-        icon: ICONS.booking,
+        icon: ICONS.icon5,
         children: [
           { title: 'Curso de educación, seguridad y ética en la caza deportiva', path: '#' },
           { title: 'Licencias de caza deportiva', path: '#' },
@@ -83,9 +75,9 @@ const navConfig = [
         ],
       },
       {
-        title: 'Camélidos Sudamericanos Silvestres  ',
+        title: 'Camélidos Sudamericanos ...  ',
         path: '',
-        icon: ICONS.booking,
+        icon: ICONS.icon5,
         children: [
           { title: 'Camélidos Sudamericanos', path: '#' },
           { title: 'Declaraciones de Manejo', path: '#' },
@@ -94,7 +86,7 @@ const navConfig = [
       {
         title: 'Registros Nacionales',
         path: '',
-        icon: ICONS.booking,
+        icon: ICONS.icon6,
         children: [
           { title: 'Regentes Forestales y de Fauna Silvestre', path: '#' },
           { title: 'Plantaciones Forestales', path: '#' },
@@ -105,7 +97,7 @@ const navConfig = [
       {
         title: 'Otros Registros ',
         path: '',
-        icon: ICONS.booking,
+        icon: ICONS.icon6,
         children: [
           { title: 'Registro de Acceso a Recursos Genéticos', path: '#' },
           { title: 'Instituciones Científicas Nacionales Depositarias de Material Biológico', path: '#' },
@@ -114,7 +106,7 @@ const navConfig = [
       {
         title: 'Publicaciones',
         path: '',
-        icon: ICONS.booking,
+        icon: ICONS.icon7,
         children: [
           { title: 'Anuarios', path: '#' },
           { title: 'Boletines', path: '#' },
@@ -124,7 +116,7 @@ const navConfig = [
       {
         title: 'Videotutoriales',
         path: '',
-        icon: ICONS.booking,
+        icon: ICONS.icon1,
         children: [
           { title: 'Aplicativo de vicuñas', path: '#' },
           { title: 'Plantaciones Forestales', path: '#' },

@@ -71,6 +71,7 @@ export default function NavbarVertical({ isOpenSidebar, onCloseSidebar }) {
       sx={{
         height: 1,
         '& .simplebar-content': { height: 1, display: 'flex', flexDirection: 'column' },
+        background: theme.palette.primary.dark,
       }}
     >
       <NavSectionVertical navConfig={navConfig} isCollapse={isCollapse} />

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 // @mui
-import { styled } from '@mui/material/styles';
+import { styled, useTheme } from '@mui/material/styles';
 import { Box } from '@mui/material';
 // hooks
 import useSettings from '../../hooks/useSettings';
@@ -10,7 +10,7 @@ import useCollapseDrawer from '../../hooks/useCollapseDrawer';
 // config
 import { HEADER, NAVBAR } from '../../config';
 //
-import DashboardHeader from './header';
+// import DashboardHeader from './header';
 import NavbarVertical from './navbar/NavbarVertical';
 import NavbarHorizontal from './navbar/NavbarHorizontal';
 
@@ -40,7 +40,11 @@ const MainStyle = styled('main', {
 // ----------------------------------------------------------------------
 
 export default function DashboardLayout() {
-  const { collapseClick, isCollapse } = useCollapseDrawer();
+  const theme = useTheme();
+  const {
+    collapseClick,
+    // isCollapse
+  } = useCollapseDrawer();
 
   const { themeLayout } = useSettings();
 
