@@ -29,7 +29,7 @@ export default function EcommerceAnalyst() {
   return (
     <Grid container spacing={2}>
       <Grid item xs={12}>
-        <Header title={'TÍTULOS HABILITANTES'} />
+        <Header title={'PRODUCCION, INDUSTRIA Y COMERCIO'} />
       </Grid>
 
       <Grid item xs={12}>
