@@ -1,0 +1,59 @@
+// @mui
+import PropTypes from 'prop-types';
+import { styled, useTheme } from '@mui/material/styles';
+import { Typography, Card, CardContent } from '@mui/material';
+
+// ----------------------------------------------------------------------
+
+const RootStyle = styled(Card)(({ theme }) => ({
+  boxShadow: 'none',
+  textAlign: 'center',
+  backgroundColor: theme.palette.primary.lighter,
+  [theme.breakpoints.up('md')]: {
+    height: '100%',
+    display: 'flex',
+    textAlign: 'left',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+}));
+
+// ----------------------------------------------------------------------
+
+AppWelcome.propTypes = {
+  action: PropTypes.node,
+  description: PropTypes.string,
+  img: PropTypes.node,
+  title: PropTypes.string,
+};
+
+export default function AppWelcome({ title, description, action, img, ...other }) {
+  const theme = useTheme();
+
+  return (
+    <RootStyle {...other}>
+      <CardContent
+        sx={{
+          p: { md: 0 },
+          pl: { md: 5 },
+          color: 'grey.800',
+        }}
+      >
+        <Typography gutterBottom variant="h4" sx={{ whiteSpace: 'pre-line', color: theme.palette.primary.dark }}>
+          {title}
+        </Typography>
+
+        <Typography
+          variant="body2"
+          sx={{ pb: { xs: 3, xl: 5 }, pt: 1, maxWidth: 780, mx: 'auto', color: theme.palette.primary.darker, opacity: 0.64 }}
+        >
+          {description}
+        </Typography>
+
+        {action && action}
+      </CardContent>
+
+      {img && img}
+    </RootStyle>
+  );
+}
