@@ -3,12 +3,12 @@ import { useTheme } from '@mui/material/styles';
 import { Grid, CardHeader } from '@mui/material';
 
 // Components
-import Header from '../Header';
-import Summary from './Summary';
-import ConcessionTypeChart from './ConcessionTypeChart';
+import Header from './sub-components/Header';
+import Summary from './sub-components/Summary';
+import ConcessionTypeChart from './sub-components/ConcessionTypeChart';
 
 // _mock_
-import { _analyticPost } from '../../../_mock';
+// import { _analyticPost } from '../../_mock';
 // ----------------------------------------------------------------------
 
 const summaryInfos = [

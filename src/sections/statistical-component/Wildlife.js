@@ -3,8 +3,8 @@ import { useTheme } from '@mui/material/styles';
 import { Grid, Card, Typography, CardHeader, Stack } from '@mui/material';
 
 // Components
-import Header from './Header';
-import Chart from './Chart';
+import Header from './sub-components/Header';
+import Chart from './sub-components/Chart';
 // ----------------------------------------------------------------------
 
 const info = [

@@ -8,7 +8,15 @@ import Page from '../components/Page';
 import Image from '../components/Image';
 
 // sections
-import { SettingForm, EnablingTitles, AppWelcome, EcommerceAnalyst, Wildlife } from '../sections/statistical-component';
+import {
+  SettingForm,
+  EnablingTitles,
+  AppWelcome,
+  EcommerceAnalyst,
+  Wildlife,
+  WildSourthAmericanCameids,
+  NationalRegistries,
+} from '../sections/statistical-component';
 
 // ----------------------------------------------------------------------
 
@@ -51,6 +59,14 @@ export default function StatisticalComponent() {
 
           <Grid item xs={12}>
             <Wildlife />
+          </Grid>
+
+          <Grid item xs={12}>
+            <WildSourthAmericanCameids />
+          </Grid>
+          
+          <Grid item xs={12}>
+            <NationalRegistries />
           </Grid>
         </Grid>
       </Container>

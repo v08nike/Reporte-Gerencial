@@ -1,27 +1,14 @@
 // @mui
 import { useTheme } from '@mui/material/styles';
-import { Grid, CardHeader } from '@mui/material';
+import { Grid } from '@mui/material';
 
 // Components
-import Header from './Header';
-import Chart from './Chart';
+import Header from './sub-components/Header';
+import Chart from './sub-components/Chart';
 
 // _mock_
-import { _analyticPost } from '../../_mock';
+// import { _analyticPost } from '../../_mock';
 // ----------------------------------------------------------------------
-
-const summaryInfos = [
-  { label: 'Italy', value: 400 },
-  { label: 'Japan', value: 430 },
-  { label: 'China', value: 448 },
-  { label: 'Canada', value: 470 },
-  { label: 'France', value: 540 },
-  { label: 'Germany', value: 580 },
-  { label: 'South Korea', value: 690 },
-  { label: 'Netherlands', value: 1100 },
-  { label: 'United States', value: 1200 },
-  { label: 'United Kingdom', value: 1380 },
-];
 
 export default function EcommerceAnalyst() {
   const theme = useTheme();

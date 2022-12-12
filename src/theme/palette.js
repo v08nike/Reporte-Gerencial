@@ -87,10 +87,10 @@ const CHART_COLORS = {
   red: ['#FF6C40', '#FF8F6D', '#FFBD98', '#FFF2D4'],
   brown: ['#876767'],
   darkYellow: ['#dad286'],
-  lightBlue: ['#86a2ac'],
+  lightBlue: ['#86a2ac','#2b8ff8'],
   gray: ['#e7e6e6'],
   lightMauve: ['#c7b9bf'],
-  darkGreen: ['#a2b191'],
+  darkGreen: ['#a2b191', '#006666'],
   darkBlue: ['#0b4b87',],
   lightGreen: ['#43b5aa']
 };
