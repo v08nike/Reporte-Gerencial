@@ -16,6 +16,7 @@ import {
   Wildlife,
   WildSourthAmericanCameids,
   NationalRegistries,
+  ComercioExterior,
 } from '../sections/statistical-component';
 
 // ----------------------------------------------------------------------
@@ -49,9 +50,9 @@ export default function StatisticalComponent() {
             <SettingForm />
           </Grid>
 
-          <Grid item xs={12}>
+          {/* <Grid item xs={12}>
             <EnablingTitles />
-          </Grid>
+          </Grid> */}
 
           <Grid item xs={12}>
             <EcommerceAnalyst />
@@ -64,9 +65,12 @@ export default function StatisticalComponent() {
           <Grid item xs={12}>
             <WildSourthAmericanCameids />
           </Grid>
-          
+
           <Grid item xs={12}>
             <NationalRegistries />
+          </Grid>
+          <Grid item xs={12}>
+            <ComercioExterior />
           </Grid>
         </Grid>
       </Container>

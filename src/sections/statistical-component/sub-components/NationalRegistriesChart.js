@@ -9,14 +9,14 @@ import { BaseOptionChart } from '../../../components/chart';
 
 // ----------------------------------------------------------------------
 
-BankingBalanceStatistics.propTypes = {
+NationalRegistriesChart.propTypes = {
   title: PropTypes.string,
   subheader: PropTypes.string,
   chartData: PropTypes.array.isRequired,
   chartLabels: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
-export default function BankingBalanceStatistics({ title, subheader, chartLabels, chartData, ...other }) {
+export default function NationalRegistriesChart({ title, subheader, chartLabels, chartData, ...other }) {
   const theme = useTheme();
   const chartOptions = merge(BaseOptionChart(), {
     stroke: {

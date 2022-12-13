@@ -1,11 +1,11 @@
 // @mui
 import { useTheme } from '@mui/material/styles';
-import { Grid, CardHeader } from '@mui/material';
+import { Grid, CardHeader, Stack } from '@mui/material';
 
 // Components
 import Header from './sub-components/Header';
 import Summary from './sub-components/Summary';
-import ConcessionTypeChart from './sub-components/ConcessionTypeChart';
+import CustomPieChart from './sub-components/CustomPieChart';
 
 // _mock_
 // import { _analyticPost } from '../../_mock';
@@ -124,19 +124,21 @@ export default function EnablingTitles() {
           <CardHeader title={summaryInfo.title} />
           <Grid container spacing={2}>
             <Grid item xs={12} md={7}>
-              <Summary
-                summaryInfo={summaryInfo.departments}
-                totalAmount={summaryInfo.totalAmount}
-                totalSurface={summaryInfo.totalSurface}
-              />
+              <Stack justifyContent="center">
+                <Summary
+                  summaryInfo={summaryInfo.departments}
+                  totalAmount={summaryInfo.totalAmount}
+                  totalSurface={summaryInfo.totalSurface}
+                />
+              </Stack>
             </Grid>
             <Grid item xs={12} md={5}>
-              <ConcessionTypeChart
-                title={'TIPODE CONCESIÓN'}
+              <CustomPieChart
+                title="Expenses Categories"
                 chartData={[
                   { label: 'FINES MADERABLES', value: 4344 },
                   { label: 'CONSERVACION', value: 5435 },
-                  { label: 'PRODUCTOS FORESTALES DIFFERENTES A LA MADERA', value: 1443 },
+                  { label: 'PRODUCTOS FORESTALES', value: 1443 },
                   { label: 'ECOTURISMO', value: 4443 },
                   { label: 'FAUNA SILVESTRE', value: 4443 },
                   { label: 'PLANTACIONES FORESTALES', value: 4443 },

@@ -4,7 +4,7 @@ import { Grid, CardHeader } from '@mui/material';
 
 // Components
 import Header from './sub-components/Header';
-import EcommerceWidgetSummary from './sub-components/EcommerceWidgetSummary';
+import CustomChartSummary from './sub-components/CustomChartSummary';
 // ----------------------------------------------------------------------
 export default function WildSourthAmericanCameids() {
   const theme = useTheme();
@@ -16,7 +16,7 @@ export default function WildSourthAmericanCameids() {
       </Grid>
 
       <Grid item xs={12} md={4}>
-        <EcommerceWidgetSummary
+        <CustomChartSummary
           title="Product Sold"
           percent={2.6}
           total={765}
@@ -26,7 +26,7 @@ export default function WildSourthAmericanCameids() {
       </Grid>
 
       <Grid item xs={12} md={4}>
-        <EcommerceWidgetSummary
+        <CustomChartSummary
           title="Total Balance"
           percent={-0.1}
           total={18765}
@@ -36,7 +36,7 @@ export default function WildSourthAmericanCameids() {
       </Grid>
 
       <Grid item xs={12} md={4}>
-        <EcommerceWidgetSummary
+        <CustomChartSummary
           title="Sales Profit"
           percent={0.6}
           total={4876}
@@ -50,7 +50,7 @@ export default function WildSourthAmericanCameids() {
       </Grid>
 
       <Grid item xs={12} md={4}>
-        <EcommerceWidgetSummary
+        <CustomChartSummary
           title="Product Sold"
           percent={2.6}
           total={765}
@@ -60,7 +60,7 @@ export default function WildSourthAmericanCameids() {
       </Grid>
 
       <Grid item xs={12} md={4}>
-        <EcommerceWidgetSummary
+        <CustomChartSummary
           title="Total Balance"
           percent={-0.1}
           total={18765}
@@ -70,7 +70,7 @@ export default function WildSourthAmericanCameids() {
       </Grid>
 
       <Grid item xs={12} md={4}>
-        <EcommerceWidgetSummary
+        <CustomChartSummary
           title="Sales Profit"
           percent={0.6}
           total={4876}

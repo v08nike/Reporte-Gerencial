@@ -4,8 +4,8 @@ import { Grid, Card, CardHeader, Typography, Stack } from '@mui/material';
 
 // Components
 import Header from './sub-components/Header';
-import BankingWidgetSummary from './sub-components/BankingWidgetSummary';
-import BankingBalanceStatistics from './sub-components/BankingBalanceStatistics';
+import NationalRegistriesSummary from './sub-components/NationalRegistriesSummary';
+import NationalRegistriesChart from './sub-components/NationalRegistriesChart';
 import Chart from './sub-components/Chart';
 // ----------------------------------------------------------------------
 
@@ -30,7 +30,7 @@ export default function NationalRegistries() {
       </Grid>
       <Grid item xs={12} md={4}>
         <Stack direction="row" justifyContent="center" alignItems="center" spacing={2} sx={{ height: '455px' }}>
-          <BankingWidgetSummary
+          <NationalRegistriesSummary
             title={'Total 2020'}
             icon={'eva:diagonal-arrow-left-down-fill'}
             percent={8.2}
@@ -40,8 +40,8 @@ export default function NationalRegistries() {
         </Stack>
       </Grid>
       <Grid item xs={12} md={8}>
-        <BankingBalanceStatistics
-          title="Balance Statistics"
+        <NationalRegistriesChart
+          title="SUPERFICIE INSTALADA DE PLANTACIONES FORESTALES (HA)"
           chartLabels={['2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020']}
           chartData={[
             {

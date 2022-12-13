@@ -26,7 +26,7 @@ const IconWrapperStyle = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-EcommerceWidgetSummary.propTypes = {
+CustomChartSummary.propTypes = {
   chartColor: PropTypes.string,
   chartData: PropTypes.arrayOf(PropTypes.number),
   percent: PropTypes.number,
@@ -35,7 +35,7 @@ EcommerceWidgetSummary.propTypes = {
   sx: PropTypes.object,
 };
 
-export default function EcommerceWidgetSummary({ title, percent, total, chartColor, chartData, sx, ...other }) {
+export default function CustomChartSummary({ title, percent, total, chartColor, chartData, sx, ...other }) {
   const chartOptions = merge(BaseOptionChart(), {
     colors: [chartColor],
     chart: { animations: { enabled: true }, sparkline: { enabled: true } },

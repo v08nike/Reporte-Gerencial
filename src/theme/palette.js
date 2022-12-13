@@ -88,12 +88,18 @@ const CHART_COLORS = {
   brown: ['#876767'],
   darkYellow: ['#dad286'],
   lightBlue: ['#86a2ac','#2b8ff8'],
-  gray: ['#e7e6e6'],
+  gray: ['#e7e6e6', '#adb9ca'],
+  darkGray: ['#44546a'],
   lightMauve: ['#c7b9bf'],
   darkGreen: ['#a2b191', '#006666'],
   darkBlue: ['#0b4b87',],
   lightGreen: ['#43b5aa']
 };
+
+const TABLE = {
+  darkBlue: ['#194f6f'],
+  gray: ['#b4c7e7']
+}
 
 const COMMON = {
   common: { black: '#000', white: '#fff' },
@@ -106,6 +112,7 @@ const COMMON = {
   grey: GREY,
   gradients: GRADIENTS,
   chart: CHART_COLORS,
+  table: TABLE,
   divider: GREY[500_24],
   action: {
     hover: GREY[500_8],

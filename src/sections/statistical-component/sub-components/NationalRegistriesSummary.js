@@ -23,7 +23,7 @@ const IconWrapperStyle = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-BankingWidgetSummary.propTypes = {
+NationalRegistriesSummary.propTypes = {
   chartData: PropTypes.arrayOf(PropTypes.number).isRequired,
   color: PropTypes.oneOf(['primary', 'secondary', 'info', 'success', 'warning', 'error']),
   icon: PropTypes.string.isRequired,
@@ -33,10 +33,10 @@ BankingWidgetSummary.propTypes = {
   sx: PropTypes.object,
 };
 
-export default function BankingWidgetSummary({
+export default function NationalRegistriesSummary({
   title,
   total,
-  icon,
+  // icon,
   percent,
   color = 'primary',
   chartData,
@@ -77,7 +77,7 @@ export default function BankingWidgetSummary({
       {...other}
     >
       <IconWrapperStyle>
-        <Stack direction="column" alignItems="center" justifyContent="flex-end" flexWrap="wrap">
+        <Stack direction="column" alignItems="flex-end" justifyContent="flex-end" flexWrap="wrap">
           <Stack direction="row" alignItems="center" flexWrap="wrap">
             <Stack direction="row" alignItems="center" flexWrap="wrap">
               <Iconify width={20} height={20} icon={percent >= 0 ? 'eva:trending-up-fill' : 'eva:trending-down-fill'} />
