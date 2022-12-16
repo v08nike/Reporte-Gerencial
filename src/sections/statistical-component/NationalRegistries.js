@@ -6,7 +6,7 @@ import { Grid, Card, CardHeader, Typography, Stack } from '@mui/material';
 import Header from './sub-components/Header';
 import NationalRegistriesSummary from './sub-components/NationalRegistriesSummary';
 import NationalRegistriesChart from './sub-components/NationalRegistriesChart';
-import Chart from './sub-components/Chart';
+import CustomAppChart from './sub-components/CustomAppChart';
 // ----------------------------------------------------------------------
 
 const info = [
@@ -83,7 +83,7 @@ export default function NationalRegistries() {
         <CardHeader title={'Infractores'} />
       </Grid>
       <Grid item xs={12}>
-        <Chart
+        <CustomAppChart
           title="Recuento de Expedientes por Órgano Sancionador"
           chartData={[
             { label: 'SERFOR', value: 2012 },

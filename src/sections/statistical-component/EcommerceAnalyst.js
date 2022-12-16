@@ -4,7 +4,7 @@ import { Grid } from '@mui/material';
 
 // Components
 import Header from './sub-components/Header';
-import Chart from './sub-components/Chart';
+import CustomAppChart from './sub-components/CustomAppChart';
 
 // _mock_
 // import { _analyticPost } from '../../_mock';
@@ -20,7 +20,7 @@ export default function EcommerceAnalyst() {
       </Grid>
 
       <Grid item xs={12}>
-        <Chart
+        <CustomAppChart
           title="Productos maderables"
           subheader="Principales tipos de productos"
           chartData={[
@@ -33,7 +33,7 @@ export default function EcommerceAnalyst() {
         />
       </Grid>
       <Grid item xs={12}>
-        <Chart
+        <CustomAppChart
           title="Productos diferentes a la madera"
           // subheader="(+43%) than last year"
           chartData={[

@@ -1,10 +1,10 @@
 // form
-import { useFormContext, Controller } from 'react-hook-form';
+// import { useFormContext, Controller } from 'react-hook-form';
 // @mui
-import DatePicker from '@mui/lab/DatePicker';
+// import DatePicker from '@mui/lab/DatePicker';
 import { Stack, Card, TextField, MenuItem } from '@mui/material';
 // components
-import { RHFSelect, RHFTextField, FormProvider } from '../../components/hook-form';
+// import { RHFSelect, RHFTextField, FormProvider } from '../../components/hook-form';
 // ----------------------------------------------------------------------
 
 const STATUS_OPTIONS = ['Amazonas', 'Ancash', 'Apurimac', 'Arequipa'];
@@ -19,7 +19,7 @@ export default function SettingForm() {
         <TextField
           select
           label="Departamento"
-          // value={filterService}
+          value={STATUS_OPTIONS[0]}
           // onChange={onFilterService}
           SelectProps={{
             MenuProps: {
@@ -43,6 +43,7 @@ export default function SettingForm() {
                 textTransform: 'capitalize',
               }}
             >
+              {console.log(option)}
               {option}
             </MenuItem>
           ))}

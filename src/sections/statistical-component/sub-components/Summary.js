@@ -1,13 +1,6 @@
 import PropTypes from 'prop-types';
 // @mui
-import {
-  Card,
-  Stack,
-  Grid,
-  Divider,
-  Typography,
-  CardContent,
-} from '@mui/material';
+import { Card, Stack, Grid, Divider, Typography, CardContent } from '@mui/material';
 
 // ----------------------------------------------------------------------
 
@@ -19,9 +12,9 @@ Summary.propTypes = {
 
 export default function Summary({ summaryInfo, totalAmount, totalSurface, ...other }) {
   return (
-    <Card {...other} >
+    <Card {...other}>
       <CardContent>
-        <Stack container spacing={2}>
+        <Stack spacing={2}>
           <Grid container>
             <Grid item xs={5}>
               <Typography variant="subtitle1">DEPARTAMENTO</Typography>
@@ -62,9 +55,7 @@ export default function Summary({ summaryInfo, totalAmount, totalSurface, ...oth
 
           <Grid container>
             <Grid item xs={5}>
-              <Typography variant="subtitle1">
-                TOTAL
-              </Typography>
+              <Typography variant="subtitle1">TOTAL</Typography>
             </Grid>
             <Grid item xs={3}>
               <Typography variant="subtitle2" textAlign="right">

@@ -4,7 +4,7 @@ import { Grid, Card, Typography, CardHeader, Stack } from '@mui/material';
 
 // Components
 import Header from './sub-components/Header';
-import Chart from './sub-components/Chart';
+import CustomAppChart from './sub-components/CustomAppChart';
 // ----------------------------------------------------------------------
 
 const info = [
@@ -27,7 +27,7 @@ export default function EcommerceAnalyst() {
       </Grid>
 
       <Grid item xs={6}>
-        <Chart
+        <CustomAppChart
           title="Licencias de caza deportiva"
           subheader="Total licencias Emitidas por Autoridad"
           chartData={[

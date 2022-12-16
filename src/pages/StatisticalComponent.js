@@ -19,12 +19,17 @@ import {
   ComercioExterior,
 } from '../sections/statistical-component';
 
+// mock
+import { _test } from '../_mock';
+
 // ----------------------------------------------------------------------
 
 export default function StatisticalComponent() {
   // const theme = useTheme();
 
   const { themeStretch } = useSettings();
+
+  console.log(_test);
 
   return (
     <Page title="Exportaciones | Componente Estadistico">
@@ -50,9 +55,9 @@ export default function StatisticalComponent() {
             <SettingForm />
           </Grid>
 
-          {/* <Grid item xs={12}>
-            <EnablingTitles />
-          </Grid> */}
+          <Grid item xs={12}>
+            <EnablingTitles info={_test.enablingTitles} />
+          </Grid>
 
           <Grid item xs={12}>
             <EcommerceAnalyst />

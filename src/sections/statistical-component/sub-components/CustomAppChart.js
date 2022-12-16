@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import merge from 'lodash/merge';
 import ReactApexChart from 'react-apexcharts';
 // @mui
-import { useTheme } from '@mui/material/styles';
 import { Box, Card, CardHeader } from '@mui/material';
 // utils
 import { fNumber } from '../../../utils/formatNumber';
@@ -11,15 +10,15 @@ import { BaseOptionChart } from '../../../components/chart';
 
 // ----------------------------------------------------------------------
 
-AnalyticsConversionRates.propTypes = {
+CustomAppChart.propTypes = {
   title: PropTypes.string,
   subheader: PropTypes.string,
   chartData: PropTypes.array.isRequired,
   colors: PropTypes.array.isRequired,
 };
 
-export default function AnalyticsConversionRates({ title, subheader, chartData, colors, ...other }) {
-  const theme = useTheme();
+export default function CustomAppChart({ title, subheader, chartData, colors, ...other }) {
+  // const theme = useTheme();
 
   const chartLabels = chartData.map((i) => i.label);
 
