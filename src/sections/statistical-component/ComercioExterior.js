@@ -42,66 +42,78 @@ export default function ComercioExterior() {
       </Grid>
       <Grid item xs={6}>
         <CustomTable
+          title={'Top de las 10 partidasArancelaria con mayor Valor FOB ($)'}
           tableInfo={{
             tableHead: [
               { id: 'name', label: 'Patida Description', align: 'left' },
               { id: 'value', label: 'Valor FOB($)', align: 'right' },
             ],
             tableData: [
-              { name: '4409 - Madera perfilada', value: 3668749606 },
-              { name: '4409 - Madera perfilada', value: 1231 },
-              { name: '4409 - Madera perfilada', value: 123123 },
-              { name: '4409 - Madera perfilada', value: 23432423423 },
-              { name: '4409 - Madera perfilada', value: 12345 },
-              { name: '4409 - Madera perfilada', value: 213 },
-              { name: '4409 - Madera perfilada', value: 234 },
+              { name: '4409 - Madera perfilada', value: 36687.49606 },
+              { name: '4407 - Madera aserrada', value: 25488.19918 },
+              { name: '4403 - Madera enbruto', value: 2054.80896 },
+              { name: '9403 - Los demas muebles y sus partes', value: 1790.56959 },
+              { name: '4412 - Madera contrachapada', value: 1342.68073 },
+              { name: '4418 - Obras y piezas de carpinteria', value: 1160.71083 },
+              { name: '4408 - Hojas para chapado', value: 837.09394 },
+              { name: '4420 - Marqueteria y taracea', value: 696.03126 },
+              { name: '4408 - Asientos', value: 505.36497 },
+              { name: '4408 - Articulos de mesa o de cocina', value: 144.46724 },
             ],
           }}
-          total={4068749606}
+          total={70707.42276}
           headerBgColor={theme.palette.table.darkBlue[0]}
           headerFontColor={'white'}
         />
       </Grid>
       <Grid item xs={6}>
         <CustomTable
+          title={'Top de los 10 Parises de Mayor Madera Exportada segun Valor FOB($)'}
           tableInfo={{
             tableHead: [
               { id: 'name', label: 'Patida Description', align: 'left' },
               { id: 'value', label: 'Valor FOB($)', align: 'right' },
             ],
             tableData: [
-              { name: '4409 - Madera perfilada', value: 3668749606 },
-              { name: '4409 - Madera perfilada', value: 1231 },
-              { name: '4409 - Madera perfilada', value: 123123 },
-              { name: '4409 - Madera perfilada', value: 23432423423 },
-              { name: '4409 - Madera perfilada', value: 12345 },
-              { name: '4409 - Madera perfilada', value: 213 },
-              { name: '4409 - Madera perfilada', value: 234 },
+              { name: 'ALEMANIA', value: 1786.85996 },
+              { name: 'BELGICA', value: 5305.15876 },
+              { name: 'CHINA', value: 147337.47436 },
+              { name: 'DINAMARCA', value: 3845.86084 },
+              { name: 'ECUADOR', value: 1251.60452 },
+              { name: 'ESTADOS UNIDOS', value: 4946.00659 },
+              { name: 'FRANCIA', value: 12974.02204 },
+              { name: 'MEXICO', value: 4793.21227 },
+              { name: 'REPUBLICA DOMINICANA', value: 9399.49521 },
+              { name: 'VETNAM', value: 6307.51809 },
             ],
           }}
-          total={4068749606}
+          total={40687.49606}
           headerBgColor={theme.palette.table.darkBlue[0]}
           headerFontColor={'white'}
         />
       </Grid>
       <Grid item xs={6}>
         <CustomTable
+          title={'Top de los 10 Parises de Mayor Madera Exportada segun Valor FOB($)'}
           tableInfo={{
             tableHead: [
               { id: 'name', label: 'Patida Description', align: 'left' },
               { id: 'value', label: 'Valor FOB($)', align: 'right' },
             ],
             tableData: [
-              { name: '4409 - Madera perfilada', value: 3668749606 },
-              { name: '4409 - Madera perfilada', value: 1231 },
-              { name: '4409 - Madera perfilada', value: 123123 },
-              { name: '4409 - Madera perfilada', value: 23432423423 },
-              { name: '4409 - Madera perfilada', value: 12345 },
-              { name: '4409 - Madera perfilada', value: 213 },
-              { name: '4409 - Madera perfilada', value: 234 },
+              { name: 'ALEMANIA', value: 1786.85996 },
+              { name: 'BELGICA', value: 5305.15876 },
+              { name: 'CHINA', value: 147337.47436 },
+              { name: 'DINAMARCA', value: 3845.86084 },
+              { name: 'ECUADOR', value: 1251.60452 },
+              { name: 'ESTADOS UNIDOS', value: 4946.00659 },
+              { name: 'FRANCIA', value: 12974.02204 },
+              { name: 'MEXICO', value: 4793.21227 },
+              { name: 'REPUBLICA DOMINICANA', value: 9399.49521 },
+              { name: 'VETNAM', value: 6307.51809 },
             ],
           }}
-          total={4068749606}
+          total={40687.49606}
           headerBgColor={theme.palette.table.darkBlue[0]}
           headerFontColor={'white'}
         />
@@ -110,23 +122,23 @@ export default function ComercioExterior() {
         <CustomTable
           tableInfo={{
             tableHead: [
-              { id: 'name', label: 'Patida Description', align: 'left' },
+              { id: 'name', label: 'Descripcion de partida', align: 'left' },
               { id: 'value', label: 'Valor FOB($)', align: 'right' },
             ],
             tableData: [
-              { name: '4409 - Madera perfilada', value: 3668749606 },
-              { name: '4409 - Madera perfilada', value: 1231 },
-              { name: '4409 - Madera perfilada', value: 123123 },
-              { name: '4409 - Madera perfilada', value: 23432423423 },
-              { name: '4409 - Madera perfilada', value: 12345 },
-              { name: '4409 - Madera perfilada', value: 213 },
-              { name: '4409 - Madera perfilada', value: 234 },
-              { name: '4409 - Madera perfilada', value: 4532 },
-              { name: '4409 - Madera perfilada', value: 234 },
-              { name: '4409 - Madera perfilada', value: 435545 },
+              { name: 'Papel y carton; manufacturas de pasta de celulosa, de papel o carton', value: 8983995200 },
+              {
+                name: 'madera incluidas tablillas y frisos para parques, perfilada longitudinalmente',
+                value: 6686591365,
+              },
+              { name: 'Madera aserrada', value: 3074416980 },
+              { name: 'Madera manufacturada', value: 739282203 },
+              { name: 'Muelbles de madera', value: 388367813 },
+              { name: 'Madera contrachapada (Triplay) chapada y madera estratificada similar', value: 293304122 },
+              { name: 'Otros', value: 400181483 },
             ],
           }}
-          total={4068749606}
+          total={20566039066}
           headerBgColor={theme.palette.table.gray[0]}
           headerFontColor={'black'}
         />

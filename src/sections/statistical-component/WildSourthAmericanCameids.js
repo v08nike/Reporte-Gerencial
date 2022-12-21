@@ -17,7 +17,7 @@ export default function WildSourthAmericanCameids() {
 
       <Grid item xs={12} md={4}>
         <CustomChartSummary
-          title="Product Sold"
+          title="Chakkus"
           percent={2.6}
           total={765}
           chartColor={theme.palette.primary.main}
@@ -27,7 +27,7 @@ export default function WildSourthAmericanCameids() {
 
       <Grid item xs={12} md={4}>
         <CustomChartSummary
-          title="Total Balance"
+          title="Titulares de Manejo"
           percent={-0.1}
           total={18765}
           chartColor={theme.palette.primary.main}
@@ -37,7 +37,7 @@ export default function WildSourthAmericanCameids() {
 
       <Grid item xs={12} md={4}>
         <CustomChartSummary
-          title="Sales Profit"
+          title="Fibra (kg)"
           percent={0.6}
           total={4876}
           chartColor={theme.palette.primary.main}
@@ -51,7 +51,7 @@ export default function WildSourthAmericanCameids() {
 
       <Grid item xs={12} md={4}>
         <CustomChartSummary
-          title="Product Sold"
+          title="Poblacion estimada"
           percent={2.6}
           total={765}
           chartColor={theme.palette.primary.main}
@@ -61,7 +61,7 @@ export default function WildSourthAmericanCameids() {
 
       <Grid item xs={12} md={4}>
         <CustomChartSummary
-          title="Total Balance"
+          title="Superficie (ha)"
           percent={-0.1}
           total={18765}
           chartColor={theme.palette.primary.main}
@@ -71,7 +71,7 @@ export default function WildSourthAmericanCameids() {
 
       <Grid item xs={12} md={4}>
         <CustomChartSummary
-          title="Sales Profit"
+          title="Declaraciones de manejo"
           percent={0.6}
           total={4876}
           chartColor={theme.palette.primary.main}
