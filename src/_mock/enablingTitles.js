@@ -36,4 +36,4 @@ export const expenseCategorie = [
 
 export const expenseCategorieValues = [34, 23, 56, 98, 97, 37, 54, 23, 34, 64, 37, 65, 43, 76, 54, 128, 43, 23];
 
-export const pieChartTitles = ['TIPODE CONCESIÓN', 'TIPODE AUTORIZACIÓN', 'TIPODE PERMISO']
+export const pieChartTitles = ['TIPO DE CONCESIÓN', 'TIPO DE AUTORIZACIÓN', 'TIPO DE PERMISO']
