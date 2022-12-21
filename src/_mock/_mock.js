@@ -18,12 +18,13 @@ import {
   departmentSurface,
   expenseCategorie,
   expenseCategorieValues,
+  pieChartTitles
 } from './enablingTitles';
 // ----------------------------------------------------------------------
 
 const _mock = {
   id: (index) => `e99f09a7-dd88-49d5-b1c8-1daf80c2d7b${index + 1}`,
-  woodProduct: {
+  enablingTitles: {
     name: (index) => enablingTitleName[index],
     totalAmount: (index) => enablingTitleTotalAmount[index],
     totalSurface: (index) => enablingTitleTotalSurface[index],
@@ -32,6 +33,7 @@ const _mock = {
       amount: (index) => departmentAmount[index],
       surface: (index) => departmentSurface[index],
     },
+    pieChartTitles: (index) => pieChartTitles[index],
     expenseCategorie: (index) => expenseCategorie[index],
     expenseCategorieValues: (index) => expenseCategorieValues[index],
   },

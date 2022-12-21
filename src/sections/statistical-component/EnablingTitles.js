@@ -35,7 +35,7 @@ export default function EnablingTitles({ info }) {
             </Grid>
             <Grid item xs={12} md={5}>
               <CustomPieChart
-                title="Expenses Categories"
+                title={summaryInfo.pieChartTitle}
                 chartData={summaryInfo.expenseCategorie}
                 chartColors={[
                   theme.palette.chart.brown[0],

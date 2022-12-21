@@ -1,7 +1,10 @@
 import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 // @mui
-import { styled, useTheme } from '@mui/material/styles';
+import {
+  styled,
+  // useTheme
+} from '@mui/material/styles';
 import { Box } from '@mui/material';
 // hooks
 import useSettings from '../../hooks/useSettings';
@@ -40,7 +43,7 @@ const MainStyle = styled('main', {
 // ----------------------------------------------------------------------
 
 export default function DashboardLayout() {
-  const theme = useTheme();
+  // const theme = useTheme();
   const {
     collapseClick,
     // isCollapse

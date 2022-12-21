@@ -5,7 +5,7 @@ import _mock from './_mock';
 // expenseCategorieValues : (index) => expenseCategorieValues[index]
 
 export const _test = {
-  enablingTitles : [...Array(3)].map((_, index) => ({
+  enablingTitles: [...Array(3)].map((_, index) => ({
     title: _mock.enablingTitles.name(index),
     totalAmount: _mock.enablingTitles.totalAmount(index),
     totalSurface: _mock.enablingTitles.totalSurface(index),
@@ -13,6 +13,7 @@ export const _test = {
       label: _mock.enablingTitles.expenseCategorie(i),
       value: _mock.enablingTitles.expenseCategorieValues(i + index * 6),
     })),
+    pieChartTitle: _mock.enablingTitles.pieChartTitles(index),
     departments: [...Array(5)].map((_, i) => ({
       id: _mock.id(i),
       department: _mock.enablingTitles.departments.department(i),
