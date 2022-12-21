@@ -5,12 +5,12 @@ import { Card, Stack, Grid, Divider, Typography, CardContent } from '@mui/materi
 // ----------------------------------------------------------------------
 
 Summary.propTypes = {
-  summaryInfo: PropTypes.array,
+  summaryData: PropTypes.array,
   totalAmount: PropTypes.number,
   totalSurface: PropTypes.number,
 };
 
-export default function Summary({ summaryInfo, totalAmount, totalSurface, ...other }) {
+export default function Summary({ summaryData, totalAmount, totalSurface, ...other }) {
   return (
     <Card {...other}>
       <CardContent>
@@ -33,7 +33,7 @@ export default function Summary({ summaryInfo, totalAmount, totalSurface, ...oth
 
           <Divider />
 
-          {summaryInfo.map((info, index) => (
+          {summaryData.map((info, index) => (
             <Grid container key={index}>
               <Grid item xs={5}>
                 <Typography variant="body2">{info.department}</Typography>

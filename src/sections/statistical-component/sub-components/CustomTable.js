@@ -1,6 +1,16 @@
 import PropTypes from 'prop-types';
 // @mui
-import { Card, CardHeader, Table, TableBody, TableFooter, TableContainer, TableRow, TableCell, Typography } from '@mui/material';
+import {
+  Card,
+  CardHeader,
+  Table,
+  TableBody,
+  TableFooter,
+  TableContainer,
+  TableRow,
+  TableCell,
+  Typography,
+} from '@mui/material';
 // hooks
 import useTable, { getComparator, emptyRows } from '../../../hooks/useTable';
 // components
@@ -31,12 +41,11 @@ function ProductTableRow({ row }) {
 CustomTable.propTypes = {
   title: PropTypes.string,
   tableInfo: PropTypes.object,
-  total: PropTypes.number,
   headerBgColor: PropTypes.string,
-  headerFontColor: PropTypes.string
+  headerFontColor: PropTypes.string,
 };
 
-export default function CustomTable({ title, tableInfo, total, headerBgColor, headerFontColor }) {
+export default function CustomTable({ title, tableInfo, headerBgColor, headerFontColor }) {
   const { tableHead, tableData } = tableInfo;
 
   const { dense, page, order, orderBy, rowsPerPage, onSort } = useTable({
@@ -88,7 +97,7 @@ export default function CustomTable({ title, tableInfo, total, headerBgColor, he
               </TableCell>
               <TableCell align="right">
                 <Typography variant="h6" noWrap>
-                  {total}
+                  {tableData.reduce((sum, it) => parseFloat(sum) + parseFloat(it.value), 0)}
                 </Typography>
               </TableCell>
             </TableRow>

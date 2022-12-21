@@ -43,7 +43,6 @@ export default function SettingForm() {
                 textTransform: 'capitalize',
               }}
             >
-              {console.log(option)}
               {option}
             </MenuItem>
           ))}

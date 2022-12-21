@@ -56,26 +56,26 @@ export default function StatisticalComponent() {
           </Grid>
 
           <Grid item xs={12}>
-            <EnablingTitles info={_test.enablingTitles} />
+            <EnablingTitles data={_test.enablingTitles} />
           </Grid>
 
           <Grid item xs={12}>
-            <EcommerceAnalyst />
+            <EcommerceAnalyst data={_test.ecommerceAnalyst}/>
           </Grid>
 
           <Grid item xs={12}>
-            <Wildlife />
+            <Wildlife data={_test.wildlife}/>
           </Grid>
 
           <Grid item xs={12}>
-            <WildSourthAmericanCameids />
+            <WildSourthAmericanCameids data={_test.wildSouthAmericanCamelids} />
           </Grid>
 
           <Grid item xs={12}>
-            <NationalRegistries />
+            <NationalRegistries data={_test.nationalRegistries} />
           </Grid>
           <Grid item xs={12}>
-            <ComercioExterior />
+            <ComercioExterior data={_test.comercioExterior} />
           </Grid>
         </Grid>
       </Container>

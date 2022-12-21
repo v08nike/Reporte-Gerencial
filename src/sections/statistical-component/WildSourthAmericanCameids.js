@@ -1,3 +1,6 @@
+// PropTypes
+import PropTypes from 'prop-types';
+
 // @mui
 import { useTheme } from '@mui/material/styles';
 import { Grid, CardHeader } from '@mui/material';
@@ -6,9 +9,13 @@ import { Grid, CardHeader } from '@mui/material';
 import Header from './sub-components/Header';
 import CustomChartSummary from './sub-components/CustomChartSummary';
 // ----------------------------------------------------------------------
-export default function WildSourthAmericanCameids() {
-  const theme = useTheme();
+WildSouthAmericanCameids.propTypes = {
+  data: PropTypes.object,
+};
 
+export default function WildSouthAmericanCameids({ data }) {
+  const theme = useTheme();
+  const { area, chakkus, estimatedPopulation, fiber, handlingStatements, managementHolders } = data;
   return (
     <Grid container spacing={2}>
       <Grid item xs={12}>
@@ -18,30 +25,30 @@ export default function WildSourthAmericanCameids() {
       <Grid item xs={12} md={4}>
         <CustomChartSummary
           title="Chakkus"
-          percent={2.6}
-          total={765}
+          percent={chakkus.percent}
+          total={chakkus.total}
           chartColor={theme.palette.primary.main}
-          chartData={[22, 8, 35, 50, 82, 84, 77, 12, 87, 43]}
+          chartData={chakkus.data}
         />
       </Grid>
 
       <Grid item xs={12} md={4}>
         <CustomChartSummary
           title="Titulares de Manejo"
-          percent={-0.1}
-          total={18765}
+          percent={managementHolders.percent}
+          total={managementHolders.total}
           chartColor={theme.palette.primary.main}
-          chartData={[56, 47, 40, 62, 73, 30, 23, 54, 67, 68]}
+          chartData={managementHolders.data}
         />
       </Grid>
 
       <Grid item xs={12} md={4}>
         <CustomChartSummary
           title="Fibra (kg)"
-          percent={0.6}
-          total={4876}
+          percent={fiber.percent}
+          total={fiber.total}
           chartColor={theme.palette.primary.main}
-          chartData={[40, 70, 75, 70, 50, 28, 7, 64, 38, 27]}
+          chartData={fiber.data}
         />
       </Grid>
 
@@ -52,30 +59,30 @@ export default function WildSourthAmericanCameids() {
       <Grid item xs={12} md={4}>
         <CustomChartSummary
           title="Poblacion estimada"
-          percent={2.6}
-          total={765}
+          percent={estimatedPopulation.percent}
+          total={estimatedPopulation.total}
           chartColor={theme.palette.primary.main}
-          chartData={[22, 8, 35, 50, 82, 84, 77, 12, 87, 43]}
+          chartData={estimatedPopulation.data}
         />
       </Grid>
 
       <Grid item xs={12} md={4}>
         <CustomChartSummary
           title="Superficie (ha)"
-          percent={-0.1}
-          total={18765}
+          percent={area.percent}
+          total={area.total}
           chartColor={theme.palette.primary.main}
-          chartData={[56, 47, 40, 62, 73, 30, 23, 54, 67, 68]}
+          chartData={area.data}
         />
       </Grid>
 
       <Grid item xs={12} md={4}>
         <CustomChartSummary
           title="Declaraciones de manejo"
-          percent={0.6}
-          total={4876}
+          percent={handlingStatements.percent}
+          total={handlingStatements.total}
           chartColor={theme.palette.primary.main}
-          chartData={[40, 70, 75, 70, 50, 28, 7, 64, 38, 27]}
+          chartData={handlingStatements.data}
         />
       </Grid>
     </Grid>

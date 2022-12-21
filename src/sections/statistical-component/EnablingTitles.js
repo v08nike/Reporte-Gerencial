@@ -13,30 +13,29 @@ import CustomPieChart from './sub-components/CustomPieChart';
 // ----------------------------------------------------------------------
 
 EnablingTitles.propTypes = {
-  info: PropTypes.array,
+  data: PropTypes.array,
 };
 
-export default function EnablingTitles({ info }) {
+export default function EnablingTitles({ data }) {
   const theme = useTheme();
-
   return (
     <Box>
       <Header title={'TÍTULOS HABILITANTES'} />
-      {info.map((summaryInfo, index) => (
+      {data.map((summaryData, index) => (
         <Box key={index}>
-          <CardHeader title={summaryInfo.title} />
+          <CardHeader title={summaryData.title} />
           <Grid container spacing={3}>
             <Grid item xs={12} md={7}>
               <Summary
-                summaryInfo={summaryInfo.departments}
-                totalAmount={summaryInfo.totalAmount}
-                totalSurface={summaryInfo.totalSurface}
+                summaryData={summaryData.departments}
+                totalAmount={summaryData.totalAmount}
+                totalSurface={summaryData.totalSurface}
               />
             </Grid>
             <Grid item xs={12} md={5}>
               <CustomPieChart
-                title={summaryInfo.pieChartTitle}
-                chartData={summaryInfo.expenseCategorie}
+                title={summaryData.pieChartTitle}
+                chartData={summaryData.expenseCategorie}
                 chartColors={[
                   theme.palette.chart.brown[0],
                   theme.palette.chart.darkYellow[0],
