@@ -45,7 +45,7 @@ export default function ComercioExterior({ data }) {
       </Grid>
       <Grid item xs={6}>
         <CustomTable
-          title={'Top de los 10 Parises de Mayor Madera Exportada segun Valor FOB($)'}
+          title={'Top de los 10 Paises de Mayor Madera Exportada segun Valor FOB($)'}
           tableInfo={topExportedWoodsChart}
           headerBgColor={theme.palette.table.darkBlue[0]}
           headerFontColor={'white'}
@@ -53,7 +53,7 @@ export default function ComercioExterior({ data }) {
       </Grid>
       <Grid item xs={6}>
         <CustomTable
-          title={'Top de los 10 Parises de Mayor Madera Exportada segun Valor FOB($)'}
+          title={'Top de los 10 Paises de Mayor Madera Exportada segun Valor FOB($)'}
           tableInfo={topExportedWoodsChart}
           headerBgColor={theme.palette.table.darkBlue[0]}
           headerFontColor={'white'}

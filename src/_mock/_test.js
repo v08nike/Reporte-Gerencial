@@ -162,7 +162,7 @@ export const _test = {
     },
     topTariffItemsChart: {
       tableHead: [
-        { id: 'name', label: 'Patida Description', align: 'left' },
+        { id: 'name', label: 'Patida', align: 'left' },
         { id: 'value', label: 'Valor FOB($)', align: 'right' },
       ],
       tableData: [
@@ -180,7 +180,7 @@ export const _test = {
     }, 
     topExportedWoodsChart: {
       tableHead: [
-        { id: 'name', label: 'Patida Description', align: 'left' },
+        { id: 'name', label: 'País', align: 'left' },
         { id: 'value', label: 'Valor FOB($)', align: 'right' },
       ],
       tableData: [
@@ -198,7 +198,7 @@ export const _test = {
     },
     comercioExteriorLastTable: {
       tableHead: [
-        { id: 'name', label: 'Descripcion de partida', align: 'left' },
+        { id: 'name', label: 'Descripcion De Partida', align: 'left' },
         { id: 'value', label: 'Valor FOB($)', align: 'right' },
       ],
       tableData: [
