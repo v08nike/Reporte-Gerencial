@@ -37,7 +37,7 @@ export default function ComercioExterior({ data }) {
       </Grid>
       <Grid item xs={6}>
         <CustomTable
-          title={'Top de las 10 partidasArancelaria con mayor Valor FOB ($)'}
+          title={'Top de las 10 partidas Arancelaria con mayor Valor FOB ($)'}
           tableInfo={topTariffItemsChart}
           headerBgColor={theme.palette.table.darkBlue[0]}
           headerFontColor={'white'}
