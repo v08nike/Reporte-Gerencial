@@ -1,3 +1,5 @@
+// react
+import { useState } from 'react';
 // form
 // import { useFormContext, Controller } from 'react-hook-form';
 // @mui
@@ -7,20 +9,58 @@ import { Stack, Card, TextField, MenuItem } from '@mui/material';
 // import { RHFSelect, RHFTextField, FormProvider } from '../../components/hook-form';
 // ----------------------------------------------------------------------
 
-const STATUS_OPTIONS = ['Amazonas', 'Ancash', 'Apurimac', 'Arequipa'];
-const YEAR_OPTIONS = ['2018', '2019', '2020', '2021', '2022'];
+const REGIONS_OPTIONS = [
+  { key: '01', value: 'AMAZONAS' },
+  { key: '02', value: 'ANCASH' },
+  { key: '03', value: 'APURIMAC' },
+  { key: '04', value: 'AREQUIPA' },
+  { key: '05', value: 'AYACUCHO' },
+  { key: '06', value: 'CAJAMARCA' },
+  { key: '07', value: 'CALLAO' },
+  { key: '08', value: 'CUSCO' },
+  { key: '09', value: 'HUANCAVELICA' },
+  { key: '10', value: 'HUANUCO' },
+  { key: '11', value: 'ICA' },
+  { key: '12', value: 'JUNIN' },
+  { key: '13', value: 'LA LIBERTAD' },
+  { key: '14', value: 'LAMBAYEQUE' },
+  { key: '15', value: 'LIMA' },
+  { key: '16', value: 'LORETO' },
+  { key: '17', value: 'MADRE DE DIOS' },
+  { key: '18', value: 'MOQUEGUA' },
+  { key: '19', value: 'PASCO' },
+  { key: '20', value: 'PIURA' },
+  { key: '21', value: 'PUNO' },
+  { key: '22', value: 'SAN MARTIN' },
+  { key: '23', value: 'TACNA' },
+  { key: '24', value: 'TUMBES' },
+  { key: '25', value: 'UCAYALI' },
+];
+
+const YEAR_OPTIONS = ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'];
 
 // ----------------------------------------------------------------------
 
 export default function SettingForm() {
+  const [region, setRegion] = useState(`${REGIONS_OPTIONS[0].key},${REGIONS_OPTIONS[0].value}`);
+  const [year, setYear] = useState(YEAR_OPTIONS[0]);
+
+  const onChangeRegion = (e) => {
+    setRegion(e.target.value);
+  }
+
+  const onChangeYear = (e) => {
+    setYear(e.target.value);
+  }
+
   return (
     <Card>
       <Stack spacing={2} direction={{ xs: 'column', sm: 'row' }} sx={{ p: 3 }}>
         <TextField
           select
           label="Departamento"
-          value={STATUS_OPTIONS[0]}
-          // onChange={onFilterService}
+          value={region}
+          onChange={onChangeRegion}
           SelectProps={{
             MenuProps: {
               sx: { '& .MuiPaper-root': { maxHeight: 260 } },
@@ -31,10 +71,10 @@ export default function SettingForm() {
             textTransform: 'capitalize',
           }}
         >
-          {STATUS_OPTIONS.map((option) => (
+          {REGIONS_OPTIONS.map((option) => (
             <MenuItem
-              key={option}
-              value={option}
+              key={option.key}
+              value={`${option.key},${option.value}`}
               sx={{
                 mx: 1,
                 my: 0.5,
@@ -43,15 +83,15 @@ export default function SettingForm() {
                 textTransform: 'capitalize',
               }}
             >
-              {option}
+              {option.value}
             </MenuItem>
           ))}
         </TextField>
         <TextField
           select
           label="Año"
-          // value={filterService}
-          // onChange={onFilterService}
+          value={year}
+          onChange={onChangeYear}
           SelectProps={{
             MenuProps: {
               sx: { '& .MuiPaper-root': { maxHeight: 260 } },
