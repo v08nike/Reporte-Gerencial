@@ -10,6 +10,7 @@ import { Stack, Card, TextField, MenuItem } from '@mui/material';
 // ----------------------------------------------------------------------
 
 const REGIONS_OPTIONS = [
+  { key: '00', value: 'TODOS' },
   { key: '01', value: 'AMAZONAS' },
   { key: '02', value: 'ANCASH' },
   { key: '03', value: 'APURIMAC' },
