@@ -19,7 +19,7 @@ export default function WildSouthAmericanCameids({ data }) {
   return (
     <Grid container spacing={2}>
       <Grid item xs={12}>
-        <Header title={'Camélidos Sudamericanos Silvestres'} />
+        <Header title={'CAMÉLIDOS SUDAMERICANOS SILVESTRES'} />
       </Grid>
 
       <Grid item xs={12} md={4}>

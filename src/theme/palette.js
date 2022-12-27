@@ -101,6 +101,10 @@ const TABLE = {
   gray: ['#b4c7e7']
 }
 
+const BUTTON_COLORS = {
+  green: '#00AB55'
+}
+
 const COMMON = {
   common: { black: '#000', white: '#fff' },
   primary: { ...PRIMARY, contrastText: '#fff' },
@@ -114,6 +118,7 @@ const COMMON = {
   chart: CHART_COLORS,
   table: TABLE,
   divider: GREY[500_24],
+  button: BUTTON_COLORS,
   action: {
     hover: GREY[500_8],
     selected: GREY[500_16],

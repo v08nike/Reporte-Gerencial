@@ -4,7 +4,8 @@ import { useState } from 'react';
 // import { useFormContext, Controller } from 'react-hook-form';
 // @mui
 // import DatePicker from '@mui/lab/DatePicker';
-import { Stack, Card, TextField, MenuItem } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+import { Stack, Card, TextField, MenuItem, Button } from '@mui/material';
 // components
 // import { RHFSelect, RHFTextField, FormProvider } from '../../components/hook-form';
 // ----------------------------------------------------------------------
@@ -43,16 +44,17 @@ const YEAR_OPTIONS = ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2
 // ----------------------------------------------------------------------
 
 export default function SettingForm() {
+  const theme = useTheme();
   const [region, setRegion] = useState(`${REGIONS_OPTIONS[0].key},${REGIONS_OPTIONS[0].value}`);
   const [year, setYear] = useState(YEAR_OPTIONS[0]);
 
   const onChangeRegion = (e) => {
     setRegion(e.target.value);
-  }
+  };
 
   const onChangeYear = (e) => {
     setYear(e.target.value);
-  }
+  };
 
   return (
     <Card>
@@ -119,6 +121,12 @@ export default function SettingForm() {
             </MenuItem>
           ))}
         </TextField>
+        <Button
+          variant="contained"
+          sx={{ bgColor: theme.palette.button.green[0], width: '89px', height: '54px'}}
+        >
+          Filtrar
+        </Button>
       </Stack>
     </Card>
   );

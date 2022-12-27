@@ -24,7 +24,7 @@ export default function NationalRegistries({data}) {
   return (
     <Grid container spacing={2}>
       <Grid item xs={12}>
-        <Header title={'Registros Nacionales'} />
+        <Header title={'REGISTROS NACIONALES'} />
       </Grid>
       <Grid item xs={12}>
         <CardHeader title={'Plantaciones forestales'} />
