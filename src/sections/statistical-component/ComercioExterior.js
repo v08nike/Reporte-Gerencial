@@ -25,7 +25,7 @@ export default function ComercioExterior({ data }) {
   return (
     <Grid container spacing={2}>
       <Grid item xs={12}>
-        <Header title={'PRODUCCION, INDUSTRIA Y COMERCIO'} />
+        <Header title={'PRODUCCION, INDUSTRIA Y COMERCIO EXTERIOR'} />
       </Grid>
 
       <Grid item xs={12} md={6}>
