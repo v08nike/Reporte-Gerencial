@@ -1,6 +1,12 @@
+// React
+import { useState } from 'react';
 // @mui
 // import { useTheme } from '@mui/material/styles';
 import { Container, Grid } from '@mui/material';
+// jsPDF
+import JsPDF from 'jspdf';
+// htmlToImage
+import * as htmlToImage from 'html-to-image';
 // hooks
 import useSettings from '../hooks/useSettings';
 // components
@@ -28,8 +34,17 @@ export default function StatisticalComponent() {
   // const theme = useTheme();
 
   const { themeStretch } = useSettings();
+  const [isExporting, setIsExporting] = useState(false);
 
-  console.log(_test);
+  const generatePDF = async () => {
+    setIsExporting(true);
+    const page = document.querySelector('#report-page');
+    const doc = new JsPDF('p', 'px', [page.offsetWidth + 20, page.offsetHeight + 20]);
+    const imageData = await htmlToImage.toPng(page);
+    doc.addImage(imageData, 'PNG', 10, 10, page.offsetWidth, page.offsetHeight, `image`);
+    doc.save('report.pdf');
+    setIsExporting(false);
+  };
 
   return (
     <Page title="Exportaciones | Componente Estadistico">
@@ -50,31 +65,31 @@ export default function StatisticalComponent() {
               }
             />
           </Grid>
-
           <Grid item xs={12}>
-            <SettingForm />
+            <SettingForm generatePDF={generatePDF} isExporting={isExporting} />
           </Grid>
-
-          <Grid item xs={12}>
+        </Grid>
+        <Grid container id="report-page" spacing={3} mt={2}>
+          <Grid item xs={12} id="enablingTitles">
             <EnablingTitles data={_test.enablingTitles} />
           </Grid>
 
-          <Grid item xs={12}>
-            <EcommerceAnalyst data={_test.ecommerceAnalyst}/>
+          <Grid item xs={12} id="ecommerceAnalyst">
+            <EcommerceAnalyst data={_test.ecommerceAnalyst} />
           </Grid>
 
-          <Grid item xs={12}>
-            <Wildlife data={_test.wildlife}/>
+          <Grid item xs={12} id="wildlife">
+            <Wildlife data={_test.wildlife} />
           </Grid>
 
-          <Grid item xs={12}>
+          <Grid item xs={12} id="wildSourthAmericanCameids">
             <WildSourthAmericanCameids data={_test.wildSouthAmericanCamelids} />
           </Grid>
 
-          <Grid item xs={12}>
+          <Grid item xs={12} id="nationalRegistries">
             <NationalRegistries data={_test.nationalRegistries} />
           </Grid>
-          <Grid item xs={12}>
+          <Grid item xs={12} id="comercioExterior">
             <ComercioExterior data={_test.comercioExterior} />
           </Grid>
         </Grid>

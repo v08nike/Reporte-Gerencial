@@ -1,13 +1,17 @@
 // react
 import { useState } from 'react';
+// PropTypes
+import { PropTypes } from 'prop-types';
 // form
 // import { useFormContext, Controller } from 'react-hook-form';
 // @mui
 // import DatePicker from '@mui/lab/DatePicker';
 import { useTheme } from '@mui/material/styles';
 import { Stack, Card, TextField, MenuItem, Button } from '@mui/material';
+import LoadingButton from '@mui/lab/LoadingButton';
 // components
 // import { RHFSelect, RHFTextField, FormProvider } from '../../components/hook-form';
+import Iconify from '../../components/Iconify';
 // ----------------------------------------------------------------------
 
 const REGIONS_OPTIONS = [
@@ -43,7 +47,12 @@ const YEAR_OPTIONS = ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2
 
 // ----------------------------------------------------------------------
 
-export default function SettingForm() {
+SettingForm.propTypes = {
+  generatePDF: PropTypes.func,
+  isExporting: PropTypes.bool,
+};
+
+export default function SettingForm({ generatePDF, isExporting = false }) {
   const theme = useTheme();
   const [region, setRegion] = useState(`${REGIONS_OPTIONS[0].key},${REGIONS_OPTIONS[0].value}`);
   const [year, setYear] = useState(YEAR_OPTIONS[0]);
@@ -121,12 +130,18 @@ export default function SettingForm() {
             </MenuItem>
           ))}
         </TextField>
-        <Button
-          variant="contained"
-          sx={{ bgColor: theme.palette.button.green[0], width: '89px', height: '54px'}}
-        >
+        <Button variant="contained" sx={{ bgColor: theme.palette.button.green[0], width: '120px', height: '54px' }}>
           Filtrar
         </Button>
+        <LoadingButton
+          variant="outlined"
+          loading={isExporting} 
+          onClick={generatePDF}
+          sx={{ bgColor: theme.palette.button.green[0], width: '120px', height: '54px' }}
+          endIcon={<Iconify icon={'carbon:generate-pdf'} />}
+        >
+          Exportar
+        </LoadingButton>
       </Stack>
     </Card>
   );
