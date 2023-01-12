@@ -52,7 +52,6 @@ export default function NationalRegistries({data}) {
       </Grid>
       <Grid item xs={12} md={6}>
         <Card sx={{ p: 2 }}>
-          <CardHeader subheader={'Centros de  Manejo y Cría'} />
           <Stack direction="row" spacing={2}>
             {forestAndWildlifeRegents.data.map((item, index) => (
               <Stack key={index} direction="column" justifyContent="space-between" sx={{ pt: 2 }}>
@@ -70,7 +69,7 @@ export default function NationalRegistries({data}) {
               </Stack>
             ))}
           </Stack>
-        </Card>{' '}
+        </Card>
       </Grid>
 
       <Grid item xs={12}>

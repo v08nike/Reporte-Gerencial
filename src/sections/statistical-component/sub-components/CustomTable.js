@@ -61,7 +61,7 @@ export default function CustomTable({ title, tableInfo, headerBgColor, headerFon
     <Card>
       <CardHeader title={title} />
       <TableContainer>
-        <Table size={dense ? 'small' : 'medium'}>
+        <Table size="small">
           <TableHeadCustom
             order={order}
             orderBy={orderBy}
@@ -97,7 +97,7 @@ export default function CustomTable({ title, tableInfo, headerBgColor, headerFon
               </TableCell>
               <TableCell align="right">
                 <Typography variant="h6" noWrap>
-                  {tableData.reduce((sum, it) => parseFloat(sum) + parseFloat(it.value), 0)}
+                  {tableData.reduce((sum, it) => parseFloat(sum) + parseFloat(it.value), 0).toFixed(5)}
                 </Typography>
               </TableCell>
             </TableRow>

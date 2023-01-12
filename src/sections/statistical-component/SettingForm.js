@@ -43,7 +43,7 @@ const REGIONS_OPTIONS = [
   { key: '25', value: 'UCAYALI' },
 ];
 
-const YEAR_OPTIONS = ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'];
+// const YEAR_OPTIONS = ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'];
 
 // ----------------------------------------------------------------------
 
@@ -54,8 +54,14 @@ SettingForm.propTypes = {
 
 export default function SettingForm({ generatePDF, isExporting = false }) {
   const theme = useTheme();
+  const YEAR_OPTIONS = [];
+  const currentYear = new Date().getFullYear();
+  for (let y = 2001; y <= currentYear; y += 1) {
+    YEAR_OPTIONS.push(y);
+  }
+
   const [region, setRegion] = useState(`${REGIONS_OPTIONS[0].key},${REGIONS_OPTIONS[0].value}`);
-  const [year, setYear] = useState(YEAR_OPTIONS[0]);
+  const [year, setYear] = useState(currentYear);
 
   const onChangeRegion = (e) => {
     setRegion(e.target.value);
@@ -114,6 +120,9 @@ export default function SettingForm({ generatePDF, isExporting = false }) {
             textTransform: 'capitalize',
           }}
         >
+          {
+
+          }
           {YEAR_OPTIONS.map((option) => (
             <MenuItem
               key={option}
@@ -135,7 +144,7 @@ export default function SettingForm({ generatePDF, isExporting = false }) {
         </Button>
         <LoadingButton
           variant="outlined"
-          loading={isExporting} 
+          loading={isExporting}
           onClick={generatePDF}
           sx={{ bgColor: theme.palette.button.green[0], width: '120px', height: '54px' }}
           endIcon={<Iconify icon={'carbon:generate-pdf'} />}
