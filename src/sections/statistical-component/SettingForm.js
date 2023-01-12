@@ -61,7 +61,7 @@ export default function SettingForm({ generatePDF, isExporting = false }) {
   }
 
   const [region, setRegion] = useState(`${REGIONS_OPTIONS[0].key},${REGIONS_OPTIONS[0].value}`);
-  const [year, setYear] = useState(currentYear);
+  const [year, setYear] = useState(0);
 
   const onChangeRegion = (e) => {
     setRegion(e.target.value);
@@ -120,9 +120,18 @@ export default function SettingForm({ generatePDF, isExporting = false }) {
             textTransform: 'capitalize',
           }}
         >
-          {
-
-          }
+          <MenuItem
+            value={'0'}
+            sx={{
+              mx: 1,
+              my: 0.5,
+              borderRadius: 0.75,
+              typography: 'body2',
+              textTransform: 'capitalize',
+            }}
+          >
+            TODOS
+          </MenuItem>
           {YEAR_OPTIONS.map((option) => (
             <MenuItem
               key={option}
