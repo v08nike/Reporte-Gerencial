@@ -1,3 +1,4 @@
+/* eslint-disable no-await-in-loop */
 // React
 import { useState, useEffect } from 'react';
 // @mui
@@ -13,7 +14,6 @@ import useSettings from '../hooks/useSettings';
 // components
 import Page from '../components/Page';
 import Image from '../components/Image';
-
 
 // sections
 import {
@@ -45,32 +45,44 @@ export default function StatisticalComponent() {
 
   const generatePDF = async () => {
     // setIsExporting(true);
-    const page = document.querySelector('#report-page');
-    const screenW = document.body.offsetWidth;
-    const bodyW = page.offsetWidth;
-    const bodyH = page.offsetHeight;
-    const bodyPadding =  (screenW - bodyW) / 2;
+    const doc = new JsPDF('p', 'mm', 'a4');
 
-    console.log(screenW, bodyW, bodyH, bodyPadding);
+    const width = doc.internal.pageSize.getWidth();
+    const height = doc.internal.pageSize.getHeight();
 
-    const doc = new JsPDF('p', 'px', [screenW, bodyH + 300]);
+    const reportHTMLTags = [];
+    reportHTMLTags.push(document.querySelector('#enablingTitles'));
+    reportHTMLTags.push(document.querySelector('#ecommerceAnalyst'));
+    reportHTMLTags.push(document.querySelector('#wildlife'));
+    reportHTMLTags.push(document.querySelector('#wildSourthAmericanCameids'));
+    reportHTMLTags.push(document.querySelector('#nationalRegistries'));
+    reportHTMLTags.push(document.querySelector('#comercioExterior'));
 
-    doc.setFontSize(35);
-    doc.setTextColor(28, 96, 84);
-    doc.text("Reporte Gerencial de Registros de Información Forestal y Fauna Silvestre", screenW / 2 - 450, 50);
-    doc.setFontSize(25);
-    doc.setTextColor(28, 96, 84);
-    doc.text("Fuente: Autoridades Nacionales de Flora y Fauna Silvestre", 50, bodyH + 230);
-    doc.text("Componente Estadístico - SNIFFS", 50, bodyH + 250);
-    doc.setTextColor(0, 0, 255);
-    doc.textWithLink("https://sniffs.serfor.gob.pe/estadistica/es", screenW - 330, bodyH + 250, { url: 'https://sniffs.serfor.gob.pe/estadistica/es' });
+    for (let i = 0; i < reportHTMLTags.length; i += 1) {
+      if (i !== 0) doc.addPage();
+      const reportHTMLImage = await htmlToImage.toPng(reportHTMLTags[i]);
+      doc.addImage(Logo, 'PNG', width - 70, 5, 60, 15, `logo`);
+      doc.addImage(reportHTMLImage, 'PNG', 8, 40, width - 20, (width / reportHTMLTags[i].offsetWidth) * reportHTMLTags[i].offsetHeight, `body${i}`);
+      doc.setFontSize(15);
+      doc.setTextColor(28, 96, 84);
+      doc.text('Reporte Gerencial de Registros de Información Forestal y Fauna Silvestre', width / 2, 25, 'center');
 
-    doc.addImage(Logo, 'PNG', screenW - 280, 10, 200, 60, `logo`);
-    const imageData = await htmlToImage.toPng(page);
-    doc.addImage(imageData, 'PNG', bodyPadding, 100, bodyW, bodyH, `body`);
-    
+      doc.setFontSize(10);
+      doc.setTextColor(28, 96, 84);
+      doc.text('Fuente: Autoridades Nacionales de Flora y Fauna Silvestre', 10, height - 15);
+      doc.text('Componente Estadístico - SNIFFS', 10, height - 10);
+      doc.setTextColor(0, 0, 255);
+      doc.textWithLink('https://sniffs.serfor.gob.pe/estadistica/es', width - 74, height - 15, {
+        url: 'https://sniffs.serfor.gob.pe/estadistica/es',
+      });
+    }
+
     doc.save('report.pdf');
     // setIsExporting(false);
+  };
+
+  const filter = async (region, year) => {
+    console.log(region, year);
   };
 
   console.log(_test);
@@ -108,11 +120,11 @@ export default function StatisticalComponent() {
             />
           </Grid>
           <Grid item xs={12}>
-            <SettingForm generatePDF={generatePDF} isExporting={isExporting} />
+            <SettingForm generatePDF={generatePDF} filter={filter} isExporting={isExporting} />
           </Grid>
         </Grid>
         {isLoading ? (
-          <Stack mt={6} direction='row' alignItems='center' justifyContent='center'>
+          <Stack mt={6} direction="row" alignItems="center" justifyContent="center">
             <CircularProgress disableShrink />
           </Stack>
         ) : (

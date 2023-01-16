@@ -49,10 +49,11 @@ const REGIONS_OPTIONS = [
 
 SettingForm.propTypes = {
   generatePDF: PropTypes.func,
+  filter: PropTypes.func,
   isExporting: PropTypes.bool,
 };
 
-export default function SettingForm({ generatePDF, isExporting = false }) {
+export default function SettingForm({ generatePDF, filter, isExporting = false }) {
   const theme = useTheme();
   const YEAR_OPTIONS = [];
   const currentYear = new Date().getFullYear();
@@ -148,7 +149,13 @@ export default function SettingForm({ generatePDF, isExporting = false }) {
             </MenuItem>
           ))}
         </TextField>
-        <Button variant="contained" sx={{ bgColor: theme.palette.button.green[0], width: '120px', height: '54px' }}>
+        <Button
+          variant="contained"
+          sx={{ bgColor: theme.palette.button.green[0], width: '120px', height: '54px' }}
+          onClick={() => {
+            filter(region, year);
+          }}
+        >
           Filtrar
         </Button>
         <LoadingButton
