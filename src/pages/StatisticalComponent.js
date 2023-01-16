@@ -83,6 +83,16 @@ export default function StatisticalComponent() {
 
   const filter = async (region, year) => {
     console.log(region, year);
+    setIsLoading(true);
+    axios
+      .get(`https://sniffscereportegerencial.azurewebsites.net/ReporteGerencial?anho=${year}`, {
+        responseType: 'json',
+      })
+      .then((response) => {
+        console.log(response.data);
+        setReportData(response.data);
+        setIsLoading(false);
+      });
   };
 
   console.log(_test);
