@@ -82,19 +82,9 @@ export default function StatisticalComponent() {
   };
 
   const filter = async (department, year) => {
-    console.log(department, year);
     setIsLoading(true);
-    // axios
-    //   .get(`https://sniffscereportegerencial.azurewebsites.net/ReporteGerencial?anho=${year}`, {
-    //     responseType: 'json',
-    //   })
-    //   .then((response) => {
-    //     console.log(response.data);
-    //     setReportData(response.data);
-    //     setIsLoading(false);
-    //   });
     axios
-      .get(`https://sniffscereportegerencial.azurewebsites.net/ReporteGerencial?departamento=${department}`, {
+      .get(`https://sniffscereportegerencial.azurewebsites.net/ReporteGerencial?departamento=${department}&anho=${year}`, {
         responseType: 'json',
       })
       .then((response) => {
@@ -104,21 +94,10 @@ export default function StatisticalComponent() {
       });
   };
 
-  console.log(_test);
-
   useEffect(() => {
     setIsLoading(true);
-    // axios
-    //   .get(`https://sniffscereportegerencial.azurewebsites.net/ReporteGerencial?anho=2020`, {
-    //     responseType: 'json',
-    //   })
-    //   .then((response) => {
-    //     console.log(response.data);
-    //     setReportData(response.data);
-    //     setIsLoading(false);
-    //   });
     axios
-      .get(`https://sniffscereportegerencial.azurewebsites.net/ReporteGerencial?departamento=00`, {
+      .get(`https://sniffscereportegerencial.azurewebsites.net/ReporteGerencial?departamento=00&anho=0`, {
         responseType: 'json',
       })
       .then((response) => {
