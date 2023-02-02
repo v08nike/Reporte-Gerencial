@@ -33,7 +33,7 @@ function ProductTableRow({ row }) {
           {name}
         </Typography>
       </TableCell>
-      <TableCell align="right">{value}</TableCell>
+      <TableCell align="right">{value.toLocaleString("en-US")}</TableCell>
     </TableRow>
   );
 }
@@ -97,7 +97,7 @@ export default function CustomTable({ title, tableInfo, headerBgColor, headerFon
               </TableCell>
               <TableCell align="right">
                 <Typography variant="h6" noWrap>
-                  {tableData.reduce((sum, it) => parseFloat(sum) + parseFloat(it.value), 0).toFixed(5)}
+                  {parseInt(tableData.reduce((sum, it) => parseFloat(sum) + parseFloat(it.value), 0).toFixed(5), 10).toLocaleString("en-US")}
                 </Typography>
               </TableCell>
             </TableRow>

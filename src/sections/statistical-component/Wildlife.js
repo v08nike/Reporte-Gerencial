@@ -38,7 +38,7 @@ export default function EcommerceAnalyst({data}) {
             Número total de licencias de caza deportiva
           </Typography>
           <Typography variant="h2" component="h2" textAlign="center" sx={{ color: theme.palette.secondary.main }}>
-            2821
+            {sportHuntingLicenses.reduce((pre, item) => (pre + item.value), 0).toLocaleString("en-US")}
           </Typography>
         </Card>
       </Grid>

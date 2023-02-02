@@ -61,7 +61,7 @@ export default function SettingForm({ generatePDF, filter, isExporting = false }
     YEAR_OPTIONS.push(y);
   }
 
-  const [region, setRegion] = useState(`${REGIONS_OPTIONS[0].key},${REGIONS_OPTIONS[0].value}`);
+  const [department, setRegion] = useState(`${REGIONS_OPTIONS[0].key},${REGIONS_OPTIONS[0].value}`);
   const [year, setYear] = useState(0);
 
   const onChangeRegion = (e) => {
@@ -78,7 +78,7 @@ export default function SettingForm({ generatePDF, filter, isExporting = false }
         <TextField
           select
           label="Departamento"
-          value={region}
+          value={department}
           onChange={onChangeRegion}
           SelectProps={{
             MenuProps: {
@@ -153,7 +153,7 @@ export default function SettingForm({ generatePDF, filter, isExporting = false }
           variant="contained"
           sx={{ bgColor: theme.palette.button.green[0], width: '120px', height: '54px' }}
           onClick={() => {
-            filter(region, year);
+            filter(department, year);
           }}
         >
           Filtrar

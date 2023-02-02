@@ -81,11 +81,20 @@ export default function StatisticalComponent() {
     // setIsExporting(false);
   };
 
-  const filter = async (region, year) => {
-    console.log(region, year);
+  const filter = async (department, year) => {
+    console.log(department, year);
     setIsLoading(true);
+    // axios
+    //   .get(`https://sniffscereportegerencial.azurewebsites.net/ReporteGerencial?anho=${year}`, {
+    //     responseType: 'json',
+    //   })
+    //   .then((response) => {
+    //     console.log(response.data);
+    //     setReportData(response.data);
+    //     setIsLoading(false);
+    //   });
     axios
-      .get(`https://sniffscereportegerencial.azurewebsites.net/ReporteGerencial?anho=${year}`, {
+      .get(`https://sniffscereportegerencial.azurewebsites.net/ReporteGerencial?departamento=${department}`, {
         responseType: 'json',
       })
       .then((response) => {
@@ -99,8 +108,17 @@ export default function StatisticalComponent() {
 
   useEffect(() => {
     setIsLoading(true);
+    // axios
+    //   .get(`https://sniffscereportegerencial.azurewebsites.net/ReporteGerencial?anho=2020`, {
+    //     responseType: 'json',
+    //   })
+    //   .then((response) => {
+    //     console.log(response.data);
+    //     setReportData(response.data);
+    //     setIsLoading(false);
+    //   });
     axios
-      .get(`https://sniffscereportegerencial.azurewebsites.net/ReporteGerencial?anho=2020`, {
+      .get(`https://sniffscereportegerencial.azurewebsites.net/ReporteGerencial?departamento=00`, {
         responseType: 'json',
       })
       .then((response) => {
@@ -140,7 +158,7 @@ export default function StatisticalComponent() {
         ) : (
           <Grid container id="report-page" spacing={3} mt={2}>
             <Grid item xs={12} id="enablingTitles">
-              <EnablingTitles data={_test.enablingTitles} />
+              <EnablingTitles data={reportData.enablingTitles} />
             </Grid>
 
             <Grid item xs={12} id="ecommerceAnalyst">
@@ -148,7 +166,7 @@ export default function StatisticalComponent() {
             </Grid>
 
             <Grid item xs={12} id="wildlife">
-              <Wildlife data={_test.wildlife} />
+              <Wildlife data={reportData.wildlife} />
             </Grid>
 
             <Grid item xs={12} id="wildSourthAmericanCameids">
