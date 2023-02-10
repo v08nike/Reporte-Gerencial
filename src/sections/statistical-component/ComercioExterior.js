@@ -8,7 +8,9 @@ import { Grid } from '@mui/material';
 // Components
 import Header from './sub-components/Header';
 import CustomLineChart from './sub-components/CustomLineChart';
+import CustomAppChart from './sub-components/CustomAppChart';
 import CustomTable from './sub-components/CustomTable';
+import CustomVerticalChart from './sub-components/CustomVerticalChart';
 
 // _mock_
 // import { _analyticPost } from '../../_mock';
@@ -20,7 +22,8 @@ ComercioExterior.propTypes = {
 
 export default function ComercioExterior({ data }) {
   const theme = useTheme();
-  const { exportsAndImports, comercioExteriorLastTable, topExportedWoodsChart, topTariffItemsChart } = data;
+  const { exportsAndImports, comercioExteriorLastTable, topExportedWoodsChart, annualTradeBalanceChart } = data;
+  topExportedWoodsChart.sort((a, b) => b.value - a.value);
 
   return (
     <Grid container spacing={2}>
@@ -35,28 +38,12 @@ export default function ComercioExterior({ data }) {
           chartData={exportsAndImports.chartData}
         />
       </Grid>
-      <Grid item xs={6}>
-        <CustomTable
-          title={'Top de las 10 partidas Arancelaria con mayor Valor FOB ($)'}
-          tableInfo={topTariffItemsChart}
-          headerBgColor={theme.palette.table.darkBlue[0]}
-          headerFontColor={'white'}
-        />
-      </Grid>
-      <Grid item xs={6}>
-        <CustomTable
-          title={'Top de los 10 Paises de Mayor Madera Exportada segun Valor FOB($)'}
-          tableInfo={topExportedWoodsChart}
-          headerBgColor={theme.palette.table.darkBlue[0]}
-          headerFontColor={'white'}
-        />
-      </Grid>
-      <Grid item xs={6}>
-        <CustomTable
-          title={'Top de los 10 Paises de Mayor Madera Exportada segun Valor FOB($)'}
-          tableInfo={topExportedWoodsChart}
-          headerBgColor={theme.palette.table.darkBlue[0]}
-          headerFontColor={'white'}
+      <Grid item xs={12} md={6}>
+        <CustomVerticalChart
+           title="Balanza Comercial Anual"
+           subheader=""
+           chartLabels={['', '', '', '', '', '', '', '', '']}
+           chartData={annualTradeBalanceChart}
         />
       </Grid>
       <Grid item xs={12}>
@@ -64,6 +51,22 @@ export default function ComercioExterior({ data }) {
           tableInfo={comercioExteriorLastTable}
           headerBgColor={theme.palette.table.gray[0]}
           headerFontColor={'black'}
+        />
+      </Grid>
+      <Grid item xs={12} md={6}>
+        <CustomAppChart
+          title="Top de los 10 Paises de Mayor Madera Exportada segun Valor FOB($)"
+          chartData={topExportedWoodsChart}
+          colors={[theme.palette.chart.darkBlue[0]]}
+          dataLabelsOffsetX={50}
+        />
+      </Grid>
+      <Grid item xs={12} md={6}>
+        <CustomAppChart
+          title="Top de los 10 Paises de Mayor Madera Exportada segun Valor FOB($)"
+          chartData={topExportedWoodsChart}
+          colors={[theme.palette.chart.darkBlue[0]]}
+          dataLabelsOffsetX={50}
         />
       </Grid>
     </Grid>

@@ -160,42 +160,24 @@ export const _test = {
         },
       ],
     },
-    topTariffItemsChart: {
-      tableHead: [
-        { id: 'name', label: 'Partida', align: 'left' },
-        { id: 'value', label: 'Valor FOB($)', align: 'right' },
-      ],
-      tableData: [
-        { name: '4409 - Madera perfilada', value: 36687.49606 },
-        { name: '4407 - Madera aserrada', value: 25488.19918 },
-        { name: '4403 - Madera en bruto', value: 2054.80896 },
-        { name: '9403 - Los demas muebles y sus partes', value: 1790.56959 },
-        { name: '4412 - Madera contrachapada', value: 1342.68073 },
-        { name: '4418 - Obras y piezas de carpinteria', value: 1160.71083 },
-        { name: '4408 - Hojas para chapado', value: 837.09394 },
-        { name: '4420 - Marqueteria y taracea', value: 696.03126 },
-        { name: '9401 - Asientos', value: 505.36497 },
-        { name: '4419 - Articulos de mesa o de concina', value: 144.46724 },
-      ]
-    }, 
-    topExportedWoodsChart: {
-      tableHead: [
-        { id: 'name', label: 'País', align: 'left' },
-        { id: 'value', label: 'Valor FOB($)', align: 'right' },
-      ],
-      tableData: [
-        { name: 'ALEMANIA', value: 1786.85996 },
-        { name: 'BELGICA', value: 5305.15876 },
-        { name: 'CHINA', value: 147337.47436 },
-        { name: 'DINAMARCA', value: 3845.86084 },
-        { name: 'ECUADOR', value: 1251.60452 },
-        { name: 'ESTADOS UNIDOS', value: 4946.00659 },
-        { name: 'FRANCIA', value: 12974.02204 },
-        { name: 'MEXICO', value: 4793.21227 },
-        { name: 'REPUBLICA DOMINICANA', value: 9399.49521 },
-        { name: 'VETNAM', value: 6307.51809 },
-      ],
-    },
+    annualTradeBalanceChart: [
+      { name: 'Exportaciones', data: [-10, -34, -13, -56, -77, -88, -99, -77, -45] },
+      { name: 'Importaciones', data: [10, 41, 35, 151, 49, 62, 69, 91, 48] },
+      { name: 'Importaciones', data: [10, 34, 13, 56, 77, 88, 99, 77, 45] },
+    ], 
+    topExportedWoodsChart: 
+    [
+      { label: 'ALEMANIA', value: 1786.85 },
+      { label: 'BELGICA', value: 5305.15 },
+      { label: 'CHINA', value: 147337.47 },
+      { label: 'DINAMARCA', value: 3845.86 },
+      { label: 'ECUADOR', value: 1251.60 },
+      { label: 'ESTADOS UNIDOS', value: 4946.00 },
+      { label: 'FRANCIA', value: 12974.02 },
+      { label: 'MEXICO', value: 4793.21 },
+      { label: 'REPUBLICA DOMINICANA', value: 9399.49 },
+      { label: 'VETNAM', value: 6307.51 },
+    ],
     comercioExteriorLastTable: {
       tableHead: [
         { id: 'name', label: 'Descripcion De Partida', align: 'left' },

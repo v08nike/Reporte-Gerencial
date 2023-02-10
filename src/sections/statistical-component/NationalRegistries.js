@@ -80,6 +80,7 @@ export default function NationalRegistries({data}) {
           title={countOfFilesBySanctioningBody.title}
           chartData={countOfFilesBySanctioningBody.chartData}
           colors={[theme.palette.chart.lightBlue[1]]}
+          dataLabelsOffsetX={40}
         />
       </Grid>
     </Grid>

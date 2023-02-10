@@ -15,16 +15,20 @@ CustomAppChart.propTypes = {
   subheader: PropTypes.string,
   chartData: PropTypes.array.isRequired,
   colors: PropTypes.array.isRequired,
+  dataLabelsOffsetX: PropTypes.number.isRequired,
 };
 
-export default function CustomAppChart({ title, subheader, chartData, colors, ...other }) {
+export default function CustomAppChart({ title, subheader, chartData, colors, dataLabelsOffsetX, ...other }) {
   // const theme = useTheme();
 
   const chartLabels = chartData.map((i) => i.label);
 
-  const chartSeries = chartData.map((i) => i.value);
+  const chartSeries = chartData.map((i) => Math.round(i.value));
 
   const chartOptions = merge(BaseOptionChart(), {
+    chart: {
+      type: 'bar',
+    },
     tooltip: {
       marker: { show: false },
       y: {
@@ -35,10 +39,36 @@ export default function CustomAppChart({ title, subheader, chartData, colors, ..
       },
     },
     plotOptions: {
-      bar: { horizontal: true, barHeight: '28%', borderRadius: 2 },
+      bar: {
+        horizontal: true,
+        borderRadius: 2,
+        dataLabels: {
+          position: 'top',
+        },
+      },
+    },
+    bar: {
+      dataLabels: {
+        position: 'top'
+      }
+    },
+    dataLabels: {
+      enabled: true,
+      offsetX: dataLabelsOffsetX,
+      style: {
+        fontSize: '11px',
+        colors: ['#000'],
+      }
     },
     xaxis: {
       categories: chartLabels,
+    },
+    grid: {
+      xaxis: {
+        lines: {
+          show: true,
+        },
+      },
     },
     colors,
   });

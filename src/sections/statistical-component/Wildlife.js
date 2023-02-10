@@ -30,6 +30,7 @@ export default function EcommerceAnalyst({data}) {
           subheader="Total licencias Emitidas por Autoridad"
           chartData={sportHuntingLicenses}
           colors={[theme.palette.chart.lightGreen[0]]}
+          dataLabelsOffsetX={30}
         />
       </Grid>
       <Grid item xs={6}>
