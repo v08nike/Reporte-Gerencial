@@ -107,6 +107,8 @@ export default function StatisticalComponent() {
       });
   }, []);
 
+  cosole.log(_test);
+
   return (
     <Page title="Exportaciones | Componente Estadistico">
       <Container maxWidth={themeStretch ? false : 'xl'}>
