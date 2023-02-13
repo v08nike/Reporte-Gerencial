@@ -107,7 +107,7 @@ export default function StatisticalComponent() {
       });
   }, []);
 
-  cosole.log(_test);
+  console.log(_test);
 
   return (
     <Page title="Exportaciones | Componente Estadistico">
