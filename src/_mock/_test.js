@@ -178,6 +178,19 @@ export const _test = {
       { label: 'REPUBLICA DOMINICANA', value: 9399.49 },
       { label: 'VETNAM', value: 6307.51 },
     ],
+    topImportedWoodsChart: 
+    [
+      { label: 'ALEMANIA', value: 1786.85 },
+      { label: 'BELGICA', value: 5305.15 },
+      { label: 'CHINA', value: 147337.47 },
+      { label: 'DINAMARCA', value: 3845.86 },
+      { label: 'ECUADOR', value: 1251.60 },
+      { label: 'ESTADOS UNIDOS', value: 4946.00 },
+      { label: 'FRANCIA', value: 12974.02 },
+      { label: 'MEXICO', value: 4793.21 },
+      { label: 'REPUBLICA DOMINICANA', value: 9399.49 },
+      { label: 'VETNAM', value: 6307.51 },
+    ],
     comercioExteriorLastTable: {
       tableHead: [
         { id: 'name', label: 'Descripcion De Partida', align: 'left' },

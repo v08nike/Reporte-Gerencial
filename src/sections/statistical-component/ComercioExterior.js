@@ -22,7 +22,7 @@ ComercioExterior.propTypes = {
 
 export default function ComercioExterior({ data }) {
   const theme = useTheme();
-  const { exportsAndImports, comercioExteriorLastTable, topExportedWoodsChart, annualTradeBalanceChart } = data;
+  const { exportsAndImports, comercioExteriorLastTable, topExportedWoodsChart, topImportedWoodsChart, annualTradeBalanceChart } = data;
   topExportedWoodsChart.sort((a, b) => b.value - a.value);
 
   return (
@@ -63,8 +63,8 @@ export default function ComercioExterior({ data }) {
       </Grid>
       <Grid item xs={12} md={6}>
         <CustomAppChart
-          title="Top de los 10 Paises de Mayor Madera Exportada segun Valor FOB($)"
-          chartData={topExportedWoodsChart}
+          title="Top de los 10 Paises de Mayor Madera Importada segun Valor FOB($)"
+          chartData={topImportedWoodsChart}
           colors={[theme.palette.chart.darkBlue[0]]}
           dataLabelsOffsetX={50}
         />
