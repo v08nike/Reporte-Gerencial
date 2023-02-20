@@ -158,7 +158,7 @@ export default function StatisticalComponent() {
               <NationalRegistries data={_test.nationalRegistries} />
             </Grid>
             <Grid item xs={12} id="comercioExterior">
-              <ComercioExterior data={_test.comercioExterior} />
+              <ComercioExterior data={reportData.comercioExterior} />
             </Grid>
           </Grid>
         )}
