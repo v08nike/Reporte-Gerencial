@@ -58,7 +58,7 @@ export default function ComercioExterior({ data }) {
           title="Top de los 10 Paises de Mayor Madera Exportada segun Valor FOB($)"
           chartData={topExportedWoodsChart}
           colors={[theme.palette.chart.darkBlue[0]]}
-          dataLabelsOffsetX={50}
+          dataLabelsOffsetX={100}
         />
       </Grid>
       <Grid item xs={12} md={6}>
@@ -66,7 +66,7 @@ export default function ComercioExterior({ data }) {
           title="Top de los 10 Paises de Mayor Madera Importada segun Valor FOB($)"
           chartData={topImportedWoodsChart}
           colors={[theme.palette.chart.darkBlue[0]]}
-          dataLabelsOffsetX={50}
+          dataLabelsOffsetX={100}
         />
       </Grid>
     </Grid>
