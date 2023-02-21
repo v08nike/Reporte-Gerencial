@@ -49,16 +49,17 @@ export default function CustomAppChart({ title, subheader, chartData, colors, da
     },
     bar: {
       dataLabels: {
-        position: 'top'
-      }
+        position: 'top',
+      },
     },
     dataLabels: {
       enabled: true,
       offsetX: dataLabelsOffsetX,
+      formatter: (val) => val.toLocaleString('en-US'),
       style: {
         fontSize: '11px',
         colors: ['#000'],
-      }
+      },
     },
     xaxis: {
       categories: chartLabels,

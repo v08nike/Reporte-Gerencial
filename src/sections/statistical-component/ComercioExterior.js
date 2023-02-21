@@ -23,7 +23,10 @@ ComercioExterior.propTypes = {
 export default function ComercioExterior({ data }) {
   const theme = useTheme();
   const { exportsAndImports, comercioExteriorLastTable, topExportedWoodsChart, topImportedWoodsChart, annualTradeBalanceChart } = data;
+
+
   topExportedWoodsChart.sort((a, b) => b.value - a.value);
+  topImportedWoodsChart.sort((a, b) => b.value - a.value);
 
   return (
     <Grid container spacing={2}>
@@ -42,7 +45,7 @@ export default function ComercioExterior({ data }) {
         <CustomVerticalChart
            title="Balanza Comercial Anual"
            subheader=""
-           chartLabels={['', '', '', '', '', '', '', '', '']}
+           chartLabels={['2016', '2017', '2018', '2019', '2020', '2021', '2022']}
            chartData={annualTradeBalanceChart}
         />
       </Grid>
