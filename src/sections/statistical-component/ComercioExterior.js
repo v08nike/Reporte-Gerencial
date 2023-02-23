@@ -24,10 +24,6 @@ export default function ComercioExterior({ data }) {
   const theme = useTheme();
   const { exportsAndImports, comercioExteriorLastTable, topExportedWoodsChart, topImportedWoodsChart, annualTradeBalanceChart } = data;
 
-
-  topExportedWoodsChart.sort((a, b) => b.value - a.value);
-  topImportedWoodsChart.sort((a, b) => b.value - a.value);
-
   return (
     <Grid container spacing={2}>
       <Grid item xs={12}>
