@@ -78,9 +78,6 @@ export default function CustomChartSummary({ title, percent, total, chartColor, 
             {percent > 0 && '+'}
             {fPercent(percent)}
           </Typography>
-          <Typography variant="body2" component="span" noWrap sx={{ color: 'text.secondary' }}>
-            &nbsp;than last week
-          </Typography>
         </Stack>
       </Box>
 

@@ -151,11 +151,11 @@ export default function StatisticalComponent() {
             </Grid>
 
             <Grid item xs={12} id="wildSourthAmericanCameids">
-              <WildSourthAmericanCameids data={_test.wildSouthAmericanCamelids} />
+              <WildSourthAmericanCameids data={reportData.wildSouthAmericanCamelids} />
             </Grid>
 
             <Grid item xs={12} id="nationalRegistries">
-              <NationalRegistries data={_test.nationalRegistries} />
+              <NationalRegistries data={reportData.nationalRegistries} />
             </Grid>
             <Grid item xs={12} id="comercioExterior">
               <ComercioExterior data={reportData.comercioExterior} />
