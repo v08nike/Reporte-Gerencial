@@ -22,7 +22,7 @@ export default function WildSouthAmericanCameids({ data }) {
         <Header title={'CAMÉLIDOS SUDAMERICANOS SILVESTRES'} />
       </Grid>
 
-      {handlingStatements && (
+      {chakkus && (
         <Grid item xs={12} md={4}>
           <CustomChartSummary
             title="Chakkus"
@@ -34,7 +34,7 @@ export default function WildSouthAmericanCameids({ data }) {
         </Grid>
       )}
 
-      {handlingStatements && (
+      {managementHolders && (
         <Grid item xs={12} md={4}>
           <CustomChartSummary
             title="Titulares de Manejo"
@@ -46,7 +46,7 @@ export default function WildSouthAmericanCameids({ data }) {
         </Grid>
       )}
 
-      {handlingStatements && (
+      {fiber && (
         <Grid item xs={12} md={4}>
           <CustomChartSummary
             title="Fibra (kg)"
@@ -62,7 +62,7 @@ export default function WildSouthAmericanCameids({ data }) {
         <CardHeader title={'Declaraciones de manejo'} />
       </Grid>
 
-      {handlingStatements && (
+      {estimatedPopulation && (
         <Grid item xs={12} md={4}>
           <CustomChartSummary
             title="Poblacion estimada"
@@ -74,7 +74,7 @@ export default function WildSouthAmericanCameids({ data }) {
         </Grid>
       )}
 
-      {handlingStatements && (
+      {area && (
         <Grid item xs={12} md={4}>
           <CustomChartSummary
             title="Superficie (ha)"
