@@ -22,69 +22,81 @@ export default function WildSouthAmericanCameids({ data }) {
         <Header title={'CAMÉLIDOS SUDAMERICANOS SILVESTRES'} />
       </Grid>
 
-      <Grid item xs={12} md={4}>
-        <CustomChartSummary
-          title="Chakkus"
-          percent={chakkus.percent}
-          total={chakkus.total}
-          chartColor={theme.palette.primary.main}
-          chartData={chakkus.data}
-        />
-      </Grid>
+      {handlingStatements && (
+        <Grid item xs={12} md={4}>
+          <CustomChartSummary
+            title="Chakkus"
+            percent={chakkus.percent}
+            total={chakkus.total}
+            chartColor={theme.palette.primary.main}
+            chartData={chakkus.data}
+          />
+        </Grid>
+      )}
 
-      <Grid item xs={12} md={4}>
-        <CustomChartSummary
-          title="Titulares de Manejo"
-          percent={managementHolders.percent}
-          total={managementHolders.total}
-          chartColor={theme.palette.primary.main}
-          chartData={managementHolders.data}
-        />
-      </Grid>
+      {handlingStatements && (
+        <Grid item xs={12} md={4}>
+          <CustomChartSummary
+            title="Titulares de Manejo"
+            percent={managementHolders.percent}
+            total={managementHolders.total}
+            chartColor={theme.palette.primary.main}
+            chartData={managementHolders.data}
+          />
+        </Grid>
+      )}
 
-      <Grid item xs={12} md={4}>
-        <CustomChartSummary
-          title="Fibra (kg)"
-          percent={fiber.percent}
-          total={fiber.total}
-          chartColor={theme.palette.primary.main}
-          chartData={fiber.data}
-        />
-      </Grid>
+      {handlingStatements && (
+        <Grid item xs={12} md={4}>
+          <CustomChartSummary
+            title="Fibra (kg)"
+            percent={fiber.percent}
+            total={fiber.total}
+            chartColor={theme.palette.primary.main}
+            chartData={fiber.data}
+          />
+        </Grid>
+      )}
 
       <Grid item xs={12}>
         <CardHeader title={'Declaraciones de manejo'} />
       </Grid>
 
-      <Grid item xs={12} md={4}>
-        <CustomChartSummary
-          title="Poblacion estimada"
-          percent={estimatedPopulation.percent}
-          total={estimatedPopulation.total}
-          chartColor={theme.palette.primary.main}
-          chartData={estimatedPopulation.data}
-        />
-      </Grid>
+      {handlingStatements && (
+        <Grid item xs={12} md={4}>
+          <CustomChartSummary
+            title="Poblacion estimada"
+            percent={estimatedPopulation.percent}
+            total={estimatedPopulation.total}
+            chartColor={theme.palette.primary.main}
+            chartData={estimatedPopulation.data}
+          />
+        </Grid>
+      )}
 
-      <Grid item xs={12} md={4}>
-        <CustomChartSummary
-          title="Superficie (ha)"
-          percent={area.percent}
-          total={area.total}
-          chartColor={theme.palette.primary.main}
-          chartData={area.data}
-        />
-      </Grid>
+      {handlingStatements && (
+        <Grid item xs={12} md={4}>
+          <CustomChartSummary
+            title="Superficie (ha)"
+            percent={area.percent}
+            total={area.total}
+            chartColor={theme.palette.primary.main}
+            chartData={area.data}
+          />
+        </Grid>
+      )}
 
-      <Grid item xs={12} md={4}>
-        <CustomChartSummary
-          title="Declaraciones de manejo"
-          percent={handlingStatements.percent}
-          total={handlingStatements.total}
-          chartColor={theme.palette.primary.main}
-          chartData={handlingStatements.data}
-        />
-      </Grid>
+      {handlingStatements && (
+        <Grid item xs={12} md={4}>
+          <CustomChartSummary
+            title="Declaraciones de manejo"
+            percent={handlingStatements.percent}
+            total={handlingStatements.total}
+            chartColor={theme.palette.primary.main}
+            chartData={handlingStatements.data}
+          />
+        </Grid>
+      )}
     </Grid>
   );
 }
