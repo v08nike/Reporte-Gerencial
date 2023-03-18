@@ -19,6 +19,9 @@ CustomLineChart.propTypes = {
 export default function CustomLineChart({ title, subheader, chartLabels, chartData, ...other }) {
   const theme = useTheme();
 
+  console.log(chartLabels);
+  console.log(chartData);
+
   const chartOptions = merge(BaseOptionChart(), {
     xaxis: {
       categories: chartLabels,
@@ -34,7 +37,7 @@ export default function CustomLineChart({ title, subheader, chartLabels, chartDa
     <Card {...other}>
       <CardHeader title={title} subheader={subheader} />
       <Box sx={{ mt: 3, mx: 3 }} dir="ltr">
-        <ReactApexChart type="line" series={chartData} options={chartOptions} height={364} />
+        <ReactApexChart type="line" series={chartData[0].data} options={chartOptions} height={364} />
       </Box>
     </Card>
   );
