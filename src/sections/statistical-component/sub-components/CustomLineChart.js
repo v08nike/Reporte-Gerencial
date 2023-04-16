@@ -36,9 +36,11 @@ export default function CustomLineChart({ title, subheader, chartLabels, chartDa
   return (
     <Card {...other}>
       <CardHeader title={title} subheader={subheader} />
-      <Box sx={{ mt: 3, mx: 3 }} dir="ltr">
-        <ReactApexChart type="line" series={chartData[0].data} options={chartOptions} height={364} />
-      </Box>
+      {chartLabels && chartData && (
+        <Box sx={{ mt: 3, mx: 3 }} dir="ltr">
+          <ReactApexChart type="line" series={chartData[0].data} options={chartOptions} height={364} />
+        </Box>
+      )}
     </Card>
   );
 }
