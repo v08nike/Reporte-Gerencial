@@ -10,11 +10,11 @@ import Header from './sub-components/Header';
 import CustomAppChart from './sub-components/CustomAppChart';
 // ----------------------------------------------------------------------
 
-EcommerceAnalyst.propTypes = {
+Wildlife.propTypes = {
   data: PropTypes.object,
 }
 
-export default function EcommerceAnalyst({data}) {
+export default function Wildlife({data}) {
   const theme = useTheme();
   const {managementAndBreedingCenters, sportHuntingLicenses} = data;
 
